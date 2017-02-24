@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= t(".app_title_name") %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag "application", media: "all",
+      "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload" %>
+  </head>
+
+  <body>
+    <p>
+      <%= link_to_unless I18n.locale == :en, "English",
+        set_language_english_path %>|
+      <%= link_to_unless I18n.locale == :vn, "VietNam",
+        set_language_vietnam_path %>
+    </p>
+    <%= yield %>
+  </body>
+</html>
