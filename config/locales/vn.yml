@@ -1,17 +1,30 @@
 vn:
-  app_name: "ứng dụng chạy thử nghiệm về ruby "
+  views:
+    pagination:
+      first: "&laquo; Đầu"
+      last: "Cuối &raquo;"
+      previous: "&lsaquo; Sau"
+      next: "Trước &rsaquo;"
+      truncate: "&hellip;"
+  app_name: "ứng dụng chạy thử nghiệm về HTQL Thư viện"
+  user_logged: "Đăng nhập thành công!"
+  user_fail: "lỗi email hoặc mật khẩu!"
   layouts:
     header:
       app_name: "Hệ thống quản lý Thư viện trực tuyến"
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
+      log_out: "Đăng ký"
     footer:
       footer_link1: "HTQL thư viện trực tuyến"
       footer_link2: "viết bởi Thanh && Hai"
       footer_link_about: "Về chúng tôi"
       footer_link_contact: "Liên hệ"
       footer_link_news: "Tin mới"
+    application:
+      english: "Endlish"
+      vietnam: "Việt Nam"
   static_pages:
     home:
       home_title_name: "Trang chủ"
@@ -36,3 +49,19 @@ vn:
       contact_title: "Liên hệ"
       contact_content: "Liên hệ với quản trị viên tại"
       contact_link: "trang liên hệ"
+  sessions:
+    new:
+      log_in: "Đăng nhập"
+  admin:
+    categories:
+      index:
+        categories_title_name: "Danh mục Sách"
+        categories: "Danh mục Sách"
+        name: "Tên danh mục"
+        number_book: "Số sách"
+        action: "Công cụ"
+        show: "hiển thị"
+        edit: "sửa"
+        delete: "xóa"
+        are_you_sure: "Bạn có chắc?"
+        new_category: "Tạo danh mục mới"

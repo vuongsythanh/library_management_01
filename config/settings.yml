@@ -29,3 +29,5 @@ user:
   email_size: 100
   address_size: 200
   avatar_size: 200
+categories:
+  categories_per_page: 10

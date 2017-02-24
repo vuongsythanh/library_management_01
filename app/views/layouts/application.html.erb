@@ -10,9 +10,9 @@
 </head>
 <body>
   <p>
-    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+    <%= link_to_unless I18n.locale == :en, t(".english"), locale: :en %>
     |
-    <%= link_to_unless I18n.locale == :vn, "VietNam", locale: :vn %>
+    <%= link_to_unless I18n.locale == :vn, t(".vietnam"), locale: :vn %>
   </p>
   <%= render "layouts/header" %>
   <div class="container">

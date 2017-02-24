@@ -1,25 +1,30 @@
 en:
-  app_name: "Ruby on Rails Tutorial Sample App"
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"
+      truncate: "&hellip;"
+  app_name: "Library Management App"
   user_logged: "Log in succsess!"
   user_fail: "Invalid email/password combination"
-  app_title_name: "Manager Library"
-  static_pages:
-    home:
-      title: "Manager Library"
-      about: "About"
-      introduce: "Introduce for my team"
   layouts:
     header:
       app_name: "Library Management"
       home: "Home"
       help: "Help"
       login: "Log in"
+      log_out: "Log out"
     footer:
       footer_link1: "Library Management"
       footer_link2: "by Thanh && Hai"
       footer_link_about: "About"
       footer_link_contact: "Contact"
       footer_link_news: "News"
+    application:
+      english: "Endlish"
+      vietnam: "Việt Nam"
   static_pages:
     home:
       home_title_name: "Home"
@@ -46,11 +51,19 @@ en:
       contact_content: "Contact the Library Management about the
         Library Management at the"
       contact_link: "contact page"
-      content: "-------------------------------"
-    header:
-      title: "Manager Library"
-      toggle_navigation: "Toggle navigation"
-      log_out: "Log out"
   sessions:
     new:
       log_in: "Log in"
+  admin:
+    categories:
+      index:
+        categories_title_name: "Categories"
+        categories: "Categories"
+        name: "Categories Name"
+        number_book: "Number of Books"
+        action: "Action"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure?"
+        new_category: "New Categories"

@@ -17,6 +17,9 @@ gem "config"
 gem "sprockets-rails", :require => "sprockets/railtie"
 gem "bootstrap-sass", "~> 3.3.6"
 gem "font-awesome-rails"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
+gem "faker", "1.6.6"
 
 group :development, :test do
   gem "mysql2", ">= 0.3.18", "< 0.5"
