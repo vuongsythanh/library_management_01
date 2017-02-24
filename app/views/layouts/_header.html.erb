@@ -8,5 +8,11 @@
         <li><%= link_to t(".login"), "#" %></li>
       </ul>
     </nav>
+        <li>
+          <% if logged_in? %>
+            <%= link_to t(".log_out"), logout_path, method: :delete %>
+          <% end %>
+        </li>
+    </div>
   </div>
 </header>

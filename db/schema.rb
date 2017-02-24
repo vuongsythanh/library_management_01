@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170224070600) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
@@ -137,6 +138,7 @@ ActiveRecord::Schema.define(version: 20170224070600) do
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
     t.index ["email", "phone"], name: "index_users_on_email_and_phone", unique: true, using: :btree
+
   end
 
 end
