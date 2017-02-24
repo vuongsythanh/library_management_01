@@ -43,3 +43,6 @@ bower.json
 
 # Ignore file database.yml.
 config/database.yml
+
+#Ignore file test
+test/controllers/

@@ -1,3 +1,16 @@
 en:
+  app_title_name: "Manager Library"
+  static_pages:
+    home:
+      title: "Manager Library"
+      about: "About"
+      introduce: "Introduce for my team"
+
   layouts:
-    app_title_name: "Library Management 01"
+    footer:
+      content: "This is content"
+
+  header:
+    title: "Manager Library"
+    toggle_navigation: "Toggle navigation"
+
