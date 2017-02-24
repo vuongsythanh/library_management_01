@@ -1,0 +1,38 @@
+vn:
+  app_name: "ứng dụng chạy thử nghiệm về ruby "
+  layouts:
+    header:
+      app_name: "Hệ thống quản lý Thư viện trực tuyến"
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      login: "Đăng nhập"
+    footer:
+      footer_link1: "HTQL thư viện trực tuyến"
+      footer_link2: "viết bởi Thanh && Hai"
+      footer_link_about: "Về chúng tôi"
+      footer_link_contact: "Liên hệ"
+      footer_link_news: "Tin mới"
+  static_pages:
+    home:
+      home_title_name: "Trang chủ"
+      home_title: "Chào mừng truy cập tới Hệ thống quản lý Thư viện trực tuyến"
+      home_content: "Đây là trang chủ của Hệ thống"
+      home_link1: "quản lý Thư viện trực tuyến"
+      home_signup: "Đăng ký ngay !"
+    help:
+      help_title_name: "Trợ giúp"
+      help_title: "Trợ giúp"
+      help_content: "Nhận sự trợ giúp về HT tại"
+      help_link1: "trang hướng dẫn sử dụng"
+      help_content2: "để nhận sự trợ giúp về ứng dụng này, vui lòng truy cập"
+      help_link2: "hướng dẫn sử dụng"
+    about:
+      about_title_name: "Về chúng tôi"
+      about_title: "Về chúng tôi"
+      about_link_tutorial: "HTQL thư viện là ứng dụng quản lý thư viện sách"
+      about_content: "Đây là ứng dụng chạy thử nghiệm của HTQL thư viện trực tuyến"
+    contact:
+      contact_title_name: "Liên hệ"
+      contact_title: "Liên hệ"
+      contact_content: "Liên hệ với quản trị viên tại"
+      contact_link: "trang liên hệ"

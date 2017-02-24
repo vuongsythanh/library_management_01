@@ -1,7 +1,13 @@
-<footer>
-  <div class="row">
-    <div class="col-lg-12">
-      <p><%= t ".content" %></p>
-    </div>
-  </div>
+<footer class="footer">
+  <small>
+    <a href="http://www.railstutorial.org/"><%= t(".footer_link1") %></a>
+    <a href="http://www.michaelhartl.com/"><%= t(".footer_link2") %></a>
+  </small>
+  <nav>
+    <ul>
+      <li><%= link_to t(".footer_link_about"), about_path %></li>
+      <li><%= link_to t(".footer_link_contact"), contact_path %></li>
+      <li><a href="http://news.railstutorial.org/"><%= t(".footer_link_news") %></a></li>
+    </ul>
+  </nav>
 </footer>

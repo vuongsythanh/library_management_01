@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= t "app_title_name" %></title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag "application", media: "all",
-      "data-turbolinks-track": "reload" %>
-    <%= javascript_include_tag "application",
-      "data-turbolinks-track": "reload" %>
-  </head>
-
-  <body>
-    <%= render "layouts/header" %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
-      <% end %>
-      <%= yield %>
-      <%= render "layouts/footer" %>
-    </div>
-  </body>
+<head>
+  <title><%= full_title yield :title  %></title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag "application", media: "all",
+  "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application",
+  "data-turbolinks-track": "reload" %>
+</head>
+<body>
+  <p>
+    <%= link_to_unless I18n.locale == :en, "English", locale: :en %>
+    |
+    <%= link_to_unless I18n.locale == :vn, "VietNam", locale: :vn %>
+  </p>
+  <%= render "layouts/header" %>
+  <div class="container">
+    <%= yield %>
+    <%= render "layouts/footer" %>
+  </div>
+</body>
 </html>
