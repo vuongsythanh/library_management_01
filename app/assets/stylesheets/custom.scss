@@ -1,51 +1,99 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
+
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea;
+
+/* universal */
 
 body {
-  padding-top: 70px;
+  padding-top: 60px;
 }
 
-.slide-image {
-  width: 100%;
+section {
+  overflow: auto;
 }
 
-.carousel-holder {
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+  h1 {
+    margin-bottom: 10px;
+  }
+}
+
+/* typography */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
   margin-bottom: 30px;
+  text-align: center;
 }
 
-.carousel-control,
-.item {
-  border-radius: 4px;
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: $gray-light;
 }
 
-.caption {
-  height: 130px;
-  overflow: hidden;
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
 }
 
-.caption h4 {
-  white-space: nowrap;
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
 }
 
-.thumbnail img {
-  width: 100%;
-}
-
-.ratings {
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #d17581;
-}
-
-.thumbnail {
-  padding: 0;
-}
-
-.thumbnail .caption-full {
-  padding: 9px;
-  color: #333;
-}
+/* footer */
 
 footer {
-  margin: 50px 0;
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $gray-medium-light;
+  color: $gray-light;
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-darker;
+    }
+  }
+  small {
+    float: left;
+  }
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }

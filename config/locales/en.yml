@@ -1,16 +1,38 @@
 en:
-  app_title_name: "Manager Library"
+  app_name: "Ruby on Rails Tutorial Sample App"
+  layouts:
+    header:
+      app_name: "Library Management"
+      home: "Home"
+      help: "Help"
+      login: "Log in"
+    footer:
+      footer_link1: "Library Management"
+      footer_link2: "by Thanh && Hai"
+      footer_link_about: "About"
+      footer_link_contact: "Contact"
+      footer_link_news: "News"
   static_pages:
     home:
-      title: "Manager Library"
-      about: "About"
-      introduce: "Introduce for my team"
-
-  layouts:
-    footer:
-      content: "This is content"
-
-  header:
-    title: "Manager Library"
-    toggle_navigation: "Toggle navigation"
-
+      home_title_name: "Home"
+      home_title: "Welcome to the Library Management app"
+      home_content: "This is the home page for the"
+      home_link1: "Library Management"
+      home_signup: "Sign up now!"
+    help:
+      help_title_name: "Help"
+      help_title: "Help"
+      help_content: "Get help on the Library Management at the"
+      help_link1: "Library Management help page"
+      help_content2: "To get help on this Library Management, see the"
+      help_link2: "Library Management"
+    about:
+      about_title_name: "About"
+      about_title: "About"
+      about_link_tutorial: "The Library Management"
+      about_content: "This is the Library Managementlication is the first application."
+    contact:
+      contact_title_name: "Contact"
+      contact_title: "Contact"
+      contact_content: "Contact the Library Management about the Library Management at the"
+      contact_link: "contact page"
