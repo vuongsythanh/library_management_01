@@ -9,6 +9,9 @@ en:
   app_name: "Library Management App"
   user_logged: "Log in succsess!"
   user_fail: "Invalid email/password combination"
+  user_login: "Please log in."
+  create_user_fail: "Create user Fail!"
+  create_user_success: "Created succsess user!"
   layouts:
     application:
       app_name_app: "Library Management"
@@ -77,4 +80,25 @@ en:
       create:
         create_cat: "Create news categories successfully!"
         not_create_cat: "Could not create new categories!"
-
+        new_category: "New Categories"
+    users:
+      index:
+        name: "Name"
+        email: "Email"
+        role: "Role"
+        options: "Options"
+        admin: "Admin"
+        member: "Member"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        all_users: "All users"
+        confirm: "Are_you_sure"
+      modal_create_form:
+        create_user: "Create User"
+        close: "Close"
+      form:
+        create: "Create"
+    shared:
+      error_messages:
+        error: "Error"
