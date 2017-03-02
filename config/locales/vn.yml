@@ -15,7 +15,10 @@ vn:
       home: "Trang chủ"
       help: "Trợ giúp"
       login: "Đăng nhập"
-      log_out: "Đăng ký"
+      log_out: "Đăng xuất"
+      english: "English"
+      vietnam: "Việt Nam"
+      languages: "Ngôn ngữ"
     footer:
       footer_link1: "HTQL thư viện trực tuyến"
       footer_link2: "viết bởi Thanh && Hai"

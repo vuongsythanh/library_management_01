@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  scope "(:locale)", locale: /en|vn/ do
     namespace :admin do
       resources :categories
     end
@@ -10,8 +9,7 @@ Rails.application.routes.draw do
     get "about", to: "static_pages#about"
     get "help", to: "static_pages#help"
     root "static_pages#home"
-    get "/login", to: "sesions#new"
-    post "/login", to: "sesions#create"
-    delete "/logout", to: "sesions#destroy"
-  end
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
 end

@@ -16,15 +16,15 @@ en:
       help: "Help"
       login: "Log in"
       log_out: "Log out"
+      english: "English"
+      vietnam: "VietNam"
+      languages: "Languages"
     footer:
       footer_link1: "Library Management"
       footer_link2: "by Thanh && Hai"
       footer_link_about: "About"
       footer_link_contact: "Contact"
       footer_link_news: "News"
-    application:
-      english: "Endlish"
-      vietnam: "Việt Nam"
   static_pages:
     home:
       home_title_name: "Home"
