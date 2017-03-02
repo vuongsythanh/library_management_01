@@ -10,6 +10,8 @@ vn:
   user_logged: "Đăng nhập thành công!"
   user_fail: "lỗi email hoặc mật khẩu!"
   layouts:
+    application:
+      app_name_app: "Quản lý thư viện trực tuyến"
     header:
       app_name: "Hệ thống quản lý Thư viện trực tuyến"
       home: "Trang chủ"
@@ -67,4 +69,13 @@ vn:
         edit: "sửa"
         delete: "xóa"
         are_you_sure: "Bạn có chắc?"
-        new_category: "Tạo danh mục mới"
+        new_category_button: "Tạo danh mục mới"
+      modal:
+        new_category_title: "Tạo danh mục sách mới"
+        name: "Tên danh mục"
+        description: "Mô tả"
+        create: "Tạo mới"
+      create:
+        create_cat: "Tạo danh mục thành công!"
+        not_create_cat: "Tạo danh mục thất bại!"
+

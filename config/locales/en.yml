@@ -10,6 +10,8 @@ en:
   user_logged: "Log in succsess!"
   user_fail: "Invalid email/password combination"
   layouts:
+    application:
+      app_name_app: "Library Management"
     header:
       app_name: "Library Management"
       home: "Home"
@@ -66,4 +68,13 @@ en:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure?"
-        new_category: "New Categories"
+        new_category_button: "New Categories"
+      modal:
+        new_category_title: "Create news categories"
+        name: "Name"
+        description: "Description"
+        create: "Create"
+      create:
+        create_cat: "Create news categories successfully!"
+        not_create_cat: "Could not create new categories!"
+
