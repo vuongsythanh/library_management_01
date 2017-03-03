@@ -1,0 +1,36 @@
+<%= form_for [:admin, @user] do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control", required: true %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email, class: "form-control", required: true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control", required: true %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: "form-control",
+    required: true %>
+
+  <p>
+    <%= f.label :is_admin do %>
+      <%= f.radio_button :is_admin, :fasle, checked: true %>
+      <span><%= t ".user" %></span>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.label :is_admin do %>
+      <%= f.radio_button :is_admin, :true %>
+      <span><%= t ".admin" %></span>
+    <% end %>
+  </p>
+
+  <p>
+    <%= f.label :phone %>
+    <%= f.text_field :phone, class: "form-control", required: true %>
+  </p>
+
+  <p><%= f.submit t(".create"), class: "btn btn-primary" %></p>
+<% end %>

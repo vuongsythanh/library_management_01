@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     end
     resources :categories, concerns: :paginatable
   end
-
   get "english", to: "set_language#english"
   get "vietnam", to: "set_language#vietnam"
   get "contact", to: "static_pages#contact"
