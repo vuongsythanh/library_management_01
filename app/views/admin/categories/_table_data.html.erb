@@ -10,31 +10,9 @@
   </thead>
   <tbody>
     <% if @categories.any? %>
-      <% @categories.each_with_index do |category, index| %>
-        <tr>
-          <td class="text-center">
-            <% params[:page] ||= Settings.categories.params_page %>
-            <%= index_continue params[:page], index, Settings.categories.per_page %>
-          </td>
-          <td><%= link_to category.name, "#" %></td>
-          <td class="text-center"><%= category.books.size %></td>
-          <td class="text-center">
-            <%= link_to edit_admin_category_path(category), title: t(".edit"),
-              class: "btn-edit-category btn btn-warning" do %>
-              <span class="glyphicon glyphicon-edit"></span>
-            <% end %>
-          </td>
-          <td class="text-center">
-            <%= link_to admin_category_path(category), title: t(".delete"),
-              method: :delete,
-              data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
-              <span class="glyphicon glyphicon-trash"></span>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
+      <%= render "sub_table_data" %>
     <% else %>
-      <tr><td colspan="6" class="text-center no-data"><%= t ".no_data" %></td></tr>
+      <tr><td colspan="5" class="text-center no-data"><%= t ".no_data" %></td></tr>
     <% end %>
   </tbody>
 </table>
