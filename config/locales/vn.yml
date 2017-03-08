@@ -1,4 +1,29 @@
 vn:
+  dictionary:
+    name: &name "Tên"
+    phone: &phone "SĐT"
+    email: &email "Thư điện tử"
+    role: &role "Quyền"
+    admin: &admin "Quản trị viên"
+    member: &member "Thành viên"
+    create_user: &create_user "Tạo mới"
+    password: &password "Mật khẩu"
+    password_confirm: &password_confirm "Xác nhận mật khẩu"
+    edit: &edit "Sửa"
+    update: &update "Cập nhật"
+    show: &show "Hiển thị"
+    delete: &delete "Xóa"
+    save: &save "Lưu lại"
+  admin_hello: "Xin chào Quản trị viện !"
+  app_name_app: "HT Quản lý thư viện"
+  user_logged: "Đăng nhập thành công !"
+  user_fail: "Lỗi email hoặc mật khẩu !"
+  user_login: "Vui lòng đăng nhập !"
+  user_nil: "Người dùng trống !"
+  create_user_fail: "Tạo mới người dùng thất bại !"
+  create_user_success: "Tạo mới người dùng thành công !"
+  user_updated_success: "Cập nhật thành công !"
+  user_updated_fail: "Cập nhật thất bại !"
   views:
     pagination:
       first: "&laquo; Đầu"
@@ -63,14 +88,13 @@ vn:
         categories_title_name: "Danh mục Sách"
         categories: "Danh mục Sách"
         name: "Tên danh mục"
-        number_book: "Số sách"
-        action: "Công cụ"
-        edit: "sửa"
-        delete: "xóa"
         are_you_sure: "Bạn có chắc chắn muốn xóa?"
         new_category_button: "Tạo danh mục mới"
         update_cate_title: "Cập nhật danh mục"
-        no_data: "Không có dữ liệu!"
+        tool: "Công cụ "
+        print: "In dữ liệu"
+        export_to_excel: "Xuất dữ liệu excel"
+        input_categories_name: "Nhập tên danh mục..."
       modal_create:
         new_category_title: "Tạo danh mục sách mới"
         name: "Tên danh mục"
@@ -85,9 +109,67 @@ vn:
         create_not_success: "Tạo danh mục thất bại!"
       update:
         update_success: "Cập nhật danh mục thành công!"
-      delete:
+      destroy:
         delete_success: "Xóa danh mục thành công!"
         delete_not_success: "Xóa danh mục thất bại!"
       load_category:
         not_load_category: "Không tìm thấy danh mục!"
-
+      table_data:
+        index: "STT"
+        name: "Tên danh mục"
+        number_book: "Số sách"
+        edit: "Sửa"
+        delete: "Xóa"
+        no_data: "Không có dữ liệu!"
+        show: "Hiển thị "
+        of: "/"
+        record: "Tổng số bản ghi"
+    users:
+      index:
+        name: *name
+        email: *email
+        role: *role
+        options: "Tùy chọn"
+        admin: *admin
+        member: *member
+        show: *show
+        edit: *edit
+        delete: *delete
+        all_users: "Tất cả Người dùng"
+        confirm: "Bạn có chắc ?"
+        user_list: "Danh sách người dùng"
+      modal_create_form:
+        create_user: *create_user
+        close: "Close"
+      form:
+        create_user: *create_user
+        name: *name
+        email: *email
+        password: *password
+        password_confirm: *password_confirm
+        member: *member
+        admin: *admin
+        role: *role
+        phone: *phone
+        ex_password: "123456789"
+        ex_name: "John"
+        ex_email: "john@gmail.com"
+        ex_password_confirmation: "123456789"
+        ex_phone: "+84 123 456 789"
+      form_user:
+        role: *role
+        created_at: "Ngày tạo"
+        name: *name
+        email: *email
+        phone: *phone
+      edit:
+        edit_user: "Sửa người dùng"
+      show:
+        profile: "Hồ sơ cá nhân"
+      form_table:
+        show: *show
+      user_edit_form:
+        save: *save
+    shared:
+      error_messages:
+        error: "Lỗi"

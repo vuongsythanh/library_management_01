@@ -1,29 +1,29 @@
 en:
   dictionary:
-    name: &name Name
-    phone: &phone Phone
-    email: &email email
-    role: &role role
-    admin: &admin Admin
-    member: &member Member
+    name: &name "Name"
+    phone: &phone "Phone"
+    email: &email "Email"
+    role: &role "Role"
+    admin: &admin "Admin"
+    member: &member "Member"
     create_user: &create_user "Create User"
-    password: &password Password
+    password: &password "Pasword"
     password_confirm: &password_confirm "Password Confirm"
-    edit: &edit Edit
-    update: &update Update
-    show: &show Showe
-    delete: &delete Delete
-    save: &save Save
+    edit: &edit "Edit"
+    update: &update "Update"
+    show: &show "Show"
+    delete: &delete "Delete"
+    save: &save "Save"
   admin_hello: "Hello Admin!"
   app_name_app: "Library Management App"
-  user_logged: "Log in succsess!"
+  user_logged: "Login succsess!"
   user_fail: "Invalid email/password combination"
-  user_login: "Please log in."
+  user_login: "Please log in !"
   user_nil: "User nil!"
-  create_user_fail: "Create user Fail!"
-  create_user_success: "Created succsess user!"
-  user_updated_success: "Update user success"
-  user_updated_fail: "Update user fail"
+  create_user_fail: "Create user Fail !"
+  create_user_success: "Created succsess user !"
+  user_updated_success: "Update user success !"
+  user_updated_fail: "Update user fail !"
   views:
     pagination:
       first: "&laquo; First"
@@ -81,26 +81,25 @@ en:
   admin:
     categories:
       index:
-        categories_title_name: "List Categories"
-        categories: "Categories"
+        categories_title_name: "Categories List"
+        categories: "Categories List"
         name: "Categories Name"
-        number_book: "Number of Books"
-        action: "Action"
-        edit: *edit
-        delete: *delete
         are_you_sure: "Are you sure delete this item?"
         new_category_button: "New Categories"
         update_cate_title: "Update Category"
-        no_data: "No data!"
+        tool: "Tools "
+        print: "Print"
+        export_to_excel: "Export to excel"
+        input_categories_name: "Input categories name..."
       modal_create:
         new_category_title: "Create news categories"
-        name: *name
+        name: "Categories name"
         description: "Description"
         create: "Create category"
       category_edit_form:
-        name: *name
+        name: "Categories name"
         description: "Description"
-        save: *save
+        save: "Save"
       create:
         create_success: "Categories created Succesfully!"
         create_not_success: "Categories was not created!"
@@ -111,6 +110,16 @@ en:
         update_success: "Categories updated Succesfully!"
       load_category:
         not_load_category: "Not found category!"
+      table_data:
+        index: "Index"
+        name: "Categories Name"
+        number_book: "Number Books"
+        edit: "Edit"
+        delete: "Delete"
+        no_data: "No data!"
+        show: "Showing "
+        of: "/"
+        record: "All records"
     users:
       index:
         name: *name
