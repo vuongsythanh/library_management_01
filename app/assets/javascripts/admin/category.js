@@ -17,4 +17,3 @@ $(document).on('turbolinks:load', function() {
     $('.category-modal-edit').css('display', 'none');
    });
 });
-

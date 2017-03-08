@@ -115,3 +115,18 @@ th {
 .heigh_table_with_button {
   margin-bottom: 15px;
 }
+
+.btn-space {
+  margin-bottom: 10px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.pagination {
+  display: -webkit-box !important;
+  padding-left: 0 !important;
+  margin: 0 !important;
+  border-radius: 4px !important;
+  margin-left: 30px !important;
+}

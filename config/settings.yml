@@ -1,19 +1,19 @@
 attach_book:
   description_size: 500
 author:
-  name_size: 50
+  name_size: 200
   description_size: 500
 book:
-  title_size: 100
+  title_size: 200
   description_size: 500
   image_size: 500
 category:
-  name_size: 100
+  name_size: 200
   description_size: 500
 comment:
   content_size: 500
 publisher:
-  name_size: 100
+  name_size: 200
   address_size: 200
   email_size: 100
   phone_size: 20
@@ -23,7 +23,7 @@ request:
 review:
   content_size: 500
 user:
-  name_size: 100
+  name_size: 200
   phone_size: 20
   password_digest_size: 500
   email_size: 100

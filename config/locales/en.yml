@@ -79,12 +79,15 @@ en:
     new:
       log_in: "Log in"
   admin:
+    export_cate_excel:
+      index:
+        category_name_record: "Categories-"
+        xls: ".xls"
     categories:
       index:
         categories_title_name: "Categories List"
         categories: "Categories List"
         name: "Categories Name"
-        are_you_sure: "Are you sure delete this item?"
         new_category_button: "New Categories"
         update_cate_title: "Update Category"
         tool: "Tools "
@@ -111,6 +114,7 @@ en:
       load_category:
         not_load_category: "Not found category!"
       table_data:
+        are_you_sure: "Are you sure delete this item?"
         index: "Index"
         name: "Categories Name"
         number_book: "Number Books"
