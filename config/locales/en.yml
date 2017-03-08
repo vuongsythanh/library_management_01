@@ -62,25 +62,36 @@ en:
   admin:
     categories:
       index:
-        categories_title_name: "Categories"
+        categories_title_name: "List Categories"
         categories: "Categories"
         name: "Categories Name"
         number_book: "Number of Books"
         action: "Action"
-        show: "Show"
         edit: "Edit"
         delete: "Delete"
-        are_you_sure: "Are you sure?"
+        are_you_sure: "Are you sure delete this item?"
         new_category_button: "New Categories"
-      modal:
+        update_cate_title: "Update Category"
+        no_data: "No data!"
+      modal_create:
         new_category_title: "Create news categories"
         name: "Name"
         description: "Description"
-        create: "Create"
+        create: "Create category"
+      category_edit_form:
+        name: "Name"
+        description: "Description"
+        save: "Save"
       create:
-        create_cat: "Create news categories successfully!"
-        not_create_cat: "Could not create new categories!"
-        new_category: "New Categories"
+        create_success: "Categories created Succesfully!"
+        create_not_success: "Categories was not created!"
+      destroy:
+        delete_success: "Categories deleted Succesfully!"
+        delete_not_success: "Categories was not deleted!"
+      update:
+        update_success: "Categories updated Succesfully!"
+      load_category:
+        not_load_category: "Not found category!"
     users:
       index:
         name: "Name"

@@ -1,4 +1,61 @@
 <% provide :title, t(".categories_title_name") %>
 <h1><%= t ".categories" %></h1>
-<%= render "admin/categories/index" %>
-<%= render "admin/categories/modal" %>
+<%= render "admin/categories/modal_create" %>
+<p>
+  <%= link_to t(".new_category_button"), "#",
+    class: "btn btn-primary", data: {toggle: "modal", target: "#modal_create_cate"} %>
+</p>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".name" %></th>
+      <th><%= t ".number_book" %></th>
+      <th><%= t ".action" %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @categories.any? %>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.name %></td>
+          <td><%= category.books.size %></td>
+          <td>
+            <%= link_to edit_admin_category_path(category), title: t(".edit"),
+              class: "btn-edit-category btn btn-warning" do %>
+              <span class="glyphicon glyphicon-edit"></span>
+            <% end %>
+
+            <%= link_to admin_category_path(category), title: t(".delete"),
+              method: :delete,
+              data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
+              <span class="glyphicon glyphicon-trash"></span>
+            <% end %>
+          </td>
+        </tr>
+    <% end %>
+    <% else %>
+      <tr><td colspan="6" class="no-data"><%= t ".no_data" %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @categories, theme: "twitter-bootstrap-3" %>
+
+<div class="modal category-modal-edit">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modal_edit_cate_label">
+          <%= t ".update_cate_title" %>
+        </h4>
+      </div>
+      <div class="modal-body-category-edit">
+
+      </div>
+    </div>
+  </div>
+</div>

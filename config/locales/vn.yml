@@ -65,17 +65,29 @@ vn:
         name: "Tên danh mục"
         number_book: "Số sách"
         action: "Công cụ"
-        show: "hiển thị"
         edit: "sửa"
         delete: "xóa"
-        are_you_sure: "Bạn có chắc?"
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         new_category_button: "Tạo danh mục mới"
-      modal:
+        update_cate_title: "Cập nhật danh mục"
+        no_data: "Không có dữ liệu!"
+      modal_create:
         new_category_title: "Tạo danh mục sách mới"
         name: "Tên danh mục"
         description: "Mô tả"
-        create: "Tạo mới"
+        create: "Tạo mới danh mục"
+      category_edit_form:
+        name: "Tên danh mục"
+        description: "Mô tả"
+        save: "Lưu lại"
       create:
-        create_cat: "Tạo danh mục thành công!"
-        not_create_cat: "Tạo danh mục thất bại!"
+        create_success: "Tạo danh mục thành công!"
+        create_not_success: "Tạo danh mục thất bại!"
+      update:
+        update_success: "Cập nhật danh mục thành công!"
+      delete:
+        delete_success: "Xóa danh mục thành công!"
+        delete_not_success: "Xóa danh mục thất bại!"
+      load_category:
+        not_load_category: "Không tìm thấy danh mục!"
 
