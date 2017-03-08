@@ -12,7 +12,9 @@
     <% if @categories.any? %>
       <%= render "sub_table_data" %>
     <% else %>
-      <tr><td colspan="5" class="text-center no-data"><%= t ".no_data" %></td></tr>
+      <tr>
+        <td colspan="5" class="text-center no-data"><%= t ".no_data" %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>

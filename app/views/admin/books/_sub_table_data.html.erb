@@ -18,18 +18,20 @@
       </div>
     </td>
     <td class="text-center">
-      <p></p><%= book.category_name %>
+      <p><%= book.category_name %></p>
     </td>
     <td class="text-center">
       <% if book.status %>
-        <p></p><span class="label label-success"><%= t ".available" %></span>
+        <p><span class="label label-success"><%= t ".available" %></span></p>
       <% else %>
-        <p></p><span class="label label-warning"><%= t ".no_available" %></span>
+        <p>
+          <span class="label label-warning"><%= t ".no_available" %></span>
+        </p>
       <% end %>
     </td>
     <td class="text-center"><p></p>
-      <%= link_to "#", title: t(".show"),
-        class: "btn-show-publisher btn btn-primary" do %>
+      <%= link_to admin_book_path(book), title: t(".show"),
+        class: "btn-show-book btn btn-primary" do %>
         <span class="glyphicon glyphicon-zoom-in"></span>
       <% end %>
     </td>
