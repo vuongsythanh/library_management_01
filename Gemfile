@@ -20,6 +20,8 @@ gem "font-awesome-rails"
 gem "kaminari"
 gem "faker", "1.6.6"
 gem "bootstrap-kaminari-views"
+gem "sweetalert2"
+gem "turbolinks", "~> 5.0.0"
 
 group :development, :test do
   gem "mysql2", ">= 0.3.18", "< 0.5"
