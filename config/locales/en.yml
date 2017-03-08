@@ -300,7 +300,7 @@ en:
         books: "Books List"
         new_book_button: "New Books"
         export_to_excel: "Export to excel"
-        input_books_name: "Input books name or categories name..."
+        input_books_name: "Input books name"
 
       table_data:
         image: "Image"
@@ -324,6 +324,11 @@ en:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure delete this item?"
+
+    export_book_excel:
+      index:
+        book_name_record: "Books-"
+        xls: ".xls"
 
     users:
       index:

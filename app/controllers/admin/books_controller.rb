@@ -3,17 +3,32 @@ class Admin::BooksController < ApplicationController
   before_action :load_book_size, only: :index
 
   def index
-    @books = Book.select(:id, :title, :image, :status,
-      :category_id, :publisher_id, :author_id)
-      .order(created_at: :desc).page(params[:page])
-      .per Settings.books.per_page
+    if params[:search]
+      @books = Book.all
+        .search_name(params[:search]).order(created_at: :desc)
+        .page(params[:page]).per Settings.books.per_page
+    else
+      @books = Book.select(:id, :title, :image, :status,
+        :category_id, :publisher_id, :author_id)
+        .order(created_at: :desc).page(params[:page])
+        .per Settings.books.per_page
+    end
   end
-
-  private
 
   def show
     respond_to do |format|
       format.html{render partial: "modal_show_form", locals: {book: @book}}
+    end
+  end
+
+  def destroy
+    if @book.destroy
+      flash[:success] = t ".delete_success"
+    else
+      flash[:danger] = t ".delete_not_success"
+    end
+    respond_to do |format|
+      format.html{redirect_to admin_books_url}
     end
   end
 
