@@ -18,6 +18,8 @@ publisher:
   email_size: 100
   phone_size: 20
   description_size: 500
+  per_page: 10
+  params_page: 1
 request:
   description_size: 500
 review:
@@ -35,4 +37,11 @@ categories:
 users_controllers:
   per_page: 10
 categories_edit_form:
+  per_rows: 4
+publishers_edit_form:
+  per_rows: 4
+authors:
+  per_page: 10
+  params_page: 1
+authors_edit_form:
   per_rows: 4
