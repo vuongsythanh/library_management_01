@@ -9,30 +9,11 @@
   </thead>
   <tbody>
     <% if @authors.any? %>
-      <% @authors.each_with_index do |author, index| %>
-        <tr>
-          <td class="text-center">
-            <% params[:page] ||= Settings.authors.params_page %>
-            <%= index_continue params[:page], index, Settings.authors.per_page %>
-          </td>
-          <td><%= author.name %></td>
-          <td class="text-center">
-            <%= link_to edit_admin_author_path(author), title: t(".edit"),
-              class: "btn-edit-author btn btn-warning" do %>
-              <span class="glyphicon glyphicon-edit"></span>
-            <% end %>
-          </td>
-          <td class="text-center">
-            <%= link_to admin_author_path(author), title: t(".delete"),
-              method: :delete,
-              data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
-              <span class="glyphicon glyphicon-trash"></span>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
+      <%= render "sub_table_data" %>
     <% else %>
-      <tr><td colspan="4" class="text-center no-data"><%= t ".no_data" %></td></tr>
+      <tr>
+        <td colspan="4" class="text-center no-data"><%= t ".no_data" %></td>
+      </tr>
     <% end %>
   </tbody>
   <thead>
@@ -48,7 +29,7 @@
 <div class="row">
   <div class="col-lg-7">
     <%= t ".show" %><%= Settings.authors.per_page %> <%= t ".of" %>
-    <%= @authors_size %> <%= t ".record" %><br>
+    <%= @authors_size %> <%= t ".record" %>
   </div>
   <div class="col-lg-5">
     <%= paginate @authors, theme: "twitter-bootstrap-3" %>

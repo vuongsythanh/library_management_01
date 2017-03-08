@@ -10,7 +10,8 @@ class Admin::ExportAuthExcelController < ApplicationController
     respond_to do |format|
       format.html
       format.xls{
-        filename = t(".author_name_record") << "#{Time.now.strftime("%Y%m%d%H%M%S")}" << t(".xls")
+        filename = t(".author_name_record") << "#{Time.now.strftime(Settings
+          .export_auth_excel.date_time)}" << t(".xls")
         send_data(
           @authors.to_a.to_xls,
           type: "text/xls; charset=utf-8; header=present",

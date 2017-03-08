@@ -31,9 +31,6 @@ vn:
       previous: "&lsaquo; Sau"
       next: "Trước &rsaquo;"
       truncate: "&hellip;"
-  app_name: "ứng dụng chạy thử nghiệm về HTQL Thư viện"
-  user_logged: "Đăng nhập thành công!"
-  user_fail: "lỗi email hoặc mật khẩu!"
   layouts:
     application:
       app_name_app: "Quản lý thư viện trực tuyến"
@@ -82,6 +79,7 @@ vn:
   sessions:
     new:
       log_in: "Đăng nhập"
+
   admin:
     authors:
       index:
@@ -92,28 +90,34 @@ vn:
         update_auth_title: "Cập nhật"
         export_to_excel: "Xuất dữ liệu excel"
         input_authors_name: "Nhập tên tác giả..."
+
       modal_create:
         new_author_title: "Tạo mới Tác giả"
         name: "Tên tác giả"
         description: "Mô tả"
         create: "Tạo mới"
+
       author_edit_form:
         name: "Tên tác gỉa"
         description: "Mô tả"
         save: "Lưu lại"
+
       create:
         create_success: "Tạo mới tác giả thành công!"
         create_not_success: "Tạo mới tác giả thất bại!"
+
       destroy:
         delete_auth_not_success: "Không xóa được tác giả đang có sách"
         delete_success: "Xóa tác gỉa thành công!"
         delete_not_success: "Xóa tác giả thất bại!"
+
       update:
         update_success: "Cập nhật tác giả thành công!"
+
       load_category:
         not_load_author: "Không tìm thấy tác giả!"
+
       table_data:
-        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         index: "STT"
         name: "Tên tác giả"
         show: "Hiển thị "
@@ -122,41 +126,83 @@ vn:
         no_data: "Không có dữ liệu!"
         of: " /"
         record: " Tổng số bản ghi"
+
+      table_data_if_auths_any:
+        edit: "Sửa"
+        delete: "Xóa"
+        are_you_sure: "Bạn có chắc chắn muốn xóa ?"
+
     export_auth_excel:
       index:
         author_name_record: "Tác giả-"
         xls: ".xls"
+
     categories:
+      show:
+        category_book_title: "Các sách của danh mục"
+        categories: "Danh mục "
+        new_book_button: "Tạo mới sách"
+        export_to_excel: "Xuất file excel"
+        input_books_name: "Vui lòng nhập tên sách hoặc tên danh mục sách"
+        image: "ảnh"
+        book: "Thông tin sách"
+        category: "Danh mục"
+        status: "Trạng thái"
+        show: "Hiển thị "
+        edit: "Sửa"
+        delete: "Xóa"
+        no_data: "Không có dữ liệu!"
+        of: " /"
+        record: " Tổng số bản ghi"
+        back: "Quay lại"
+
+      show_table_data_if_cate_book_any:
+        title: "Title: "
+        author: "Authors: "
+        publisher: "Publishers: "
+        available: "Available"
+        no_available: "No Available"
+        show: "Show "
+        edit: "Edit"
+        delete: "Delete"
+
       index:
-        categories_title_name: "Danh mục Sách"
+        categories_title: "Danh mục Sách"
         categories: "Danh mục Sách"
         name: "Tên danh mục"
         new_category_button: "Tạo danh mục mới"
         update_cate_title: "Cập nhật danh mục"
         export_to_excel: "Xuất dữ liệu excel"
         input_categories_name: "Nhập tên danh mục..."
+
       modal_create:
         new_category_title: "Tạo danh mục sách mới"
         name: "Tên danh mục"
         description: "Mô tả"
         create: "Tạo mới danh mục"
+
       category_edit_form:
         name: "Tên danh mục"
         description: "Mô tả"
         save: "Lưu lại"
+
       create:
         create_success: "Tạo danh mục thành công!"
         create_not_success: "Tạo danh mục thất bại!"
-      update:
-        update_success: "Cập nhật danh mục thành công!"
+
       destroy:
         delete_cate_not_success: "Không xóa được danh mục đang có sách"
         delete_success: "Xóa danh mục thành công!"
         delete_not_success: "Xóa danh mục thất bại!"
+        delete_cate_not_success: "Không xóa được danh mục đang chứa sách!"
+
+      update:
+        update_success: "Cập nhật danh mục thành công!"
+
       load_category:
         not_load_category: "Không tìm thấy danh mục!"
+
       table_data:
-        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         index: "STT"
         name: "Tên danh mục"
         number_book: "Số sách"
@@ -166,27 +212,36 @@ vn:
         show: "Hiển thị "
         of: " /"
         record: " Tổng số bản ghi"
+
+      table_data_if_cates_any:
+        edit: "Sửa"
+        delete: "Xóa"
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
+
     export_cate_excel:
       index:
         category_name_record: "Danh mục sách-"
         xls: ".xls"
+
     publishers:
       index:
-        publishers_title_name: "Danh sách nhà phát hành"
+        publishers_title: "Danh sách nhà phát hành"
         publishers: "Danh sách nhà phát hành"
-        name: "Tên nhà phát hành"
         new_publisher_button: "Tạo mới"
         update_pub_title: "cập nhật"
         export_to_excel: "Xuất dữ liệu excel"
         input_publishers_name: "Điền tên nhà phát hành..."
+        update_pub_title: "Cập nhật nhà phát hành"
+
       modal_create:
-        new_publisher_title: "Tạo mới Thông tin nhà phát hành"
+        new_publisher_title: "Tạo mới nhà phát hành"
         name: "Tên nhà phát hành"
         address: "Địa chỉ"
         phone: "Số điện thoại"
         email: "Thư điện tử"
         description: "Mô tả"
         create: "Tạo mới"
+
       publisher_edit_form:
         name: "Tên nhà phát hành"
         address: "Địa chỉ"
@@ -194,26 +249,31 @@ vn:
         email: "Thư điện tử"
         description: "Mô tả"
         save: "Lưu lại"
+
       modal_show_form:
-        name: "Tên:"
-        address: "Địa chỉ:"
-        phone: "Số điện thoại:"
+        name: "Tên: "
+        address: "Địa chỉ: "
+        phone: "Số điện thoại: "
         email: "Thư điện tử: "
-        description: "Description:"
+        description: "Description: "
+
       create:
-        create_success: "Tạo mới  thành công!"
+        create_success: "Tạo mới thành công!"
         create_not_success: "Tạo mới thất bại!"
+
       destroy:
         delete_pub_not_success: "Không xóa được nhà xuất bản có sách!"
         delete_success: "Xóa Thành công!"
         delete_not_success: "Xóa thất bại!"
+
       update:
         update_success: "Cập nhật thông tin thành công!"
         update_not_success: "Cập nhật thông tin không thành công!"
+
       load_publisher:
         not_load_publisher: "Không tìm thấy nhà phát hành nào!"
+
       table_data:
-        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         email: "Thư điện tử"
         index: "STT"
         name: "Tên nhà phát hành"
@@ -223,10 +283,49 @@ vn:
         no_data: "không có dữ liệu hiển thị!"
         of: " /"
         record: " Tổng số bản ghi"
+
+      table_data_if_pubs_any:
+        show: "Hiển thị "
+        edit: "Sửa"
+        delete: "Xóa"
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
+
     export_pub_excel:
       index:
         publisher_name_record: "Nhà phát hành-"
         xls: ".xls"
+
+    books:
+      index:
+        books_title: "Danh sách - Sách"
+        books: "Danh sách - Sách"
+        new_book_button: "Tạo sách mới"
+        export_to_excel: "Xuất dữ liệu excel"
+        input_books_name: "Vui lòng nhập tên sách hoặc tên danh mục sách..."
+
+      table_data:
+        image: "Ảnh"
+        book: "Thông tin sách"
+        category: "Danh mục sách"
+        status: "Trạng thái"
+        show: "Hiển thị"
+        edit: "Sửa"
+        delete: "Xóa"
+        no_data: "Không có dữ liệu!"
+        of: " /"
+        record: " Tổng số bản ghi"
+
+      table_data_if_books_any:
+        title: "Tên sách: "
+        author: "Tác giả: "
+        publisher: "Nhà phát hành: "
+        available: "Có sẵn"
+        no_available: "Không có sẵn"
+        show: "Hiển thị"
+        edit: "Sửa"
+        delete: "Xóa"
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
+
     users:
       index:
         name: *name

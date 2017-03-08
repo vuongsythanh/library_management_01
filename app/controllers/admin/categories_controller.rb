@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :load_category, except: [:create,:index]
+  before_action :load_category, except: [:create, :index]
+  before_action :load_cate_books, except: [:create, :index]
   before_action :load_category_size, only: :index
 
   def index
@@ -15,11 +16,14 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def show
+  end
+
   def create
     @category = Category.new category_params
     respond_to do |format|
       if @category.save
-        flash[:success] = t ".create_success"
+        flash.now[:success] = t ".create_success"
         format.html{redirect_to admin_categories_url}
       else
         flash[:danger] = t ".create_not_success"
@@ -40,7 +44,7 @@ class Admin::CategoriesController < ApplicationController
     if @category.update_attributes category_params
       flash[:success] = t ".update_success"
     end
-    redirect_to :back
+    redirect_to admin_categories_url
   end
 
   def destroy
@@ -63,6 +67,11 @@ class Admin::CategoriesController < ApplicationController
   def load_category
     @category = Category.find_by id: params[:id]
     flash[:info] = t ".not_load_category" if @category.nil?
+  end
+
+  def load_cate_books
+    @cate_books = @category.books.order(created_at: :desc)
+      .page(params[:page]).per Settings.categories.per_page
   end
 
   def category_params

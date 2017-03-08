@@ -3,7 +3,7 @@ class CreateAttachBooks < ActiveRecord::Migration[5.0]
     create_table :attach_books do |t|
       t.datetime :publish_date
       t.integer :number_page
-      t.datetime :limit_date
+      t.integer :limit_date
       t.text :description
       t.references :book
 

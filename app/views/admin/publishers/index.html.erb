@@ -1,4 +1,4 @@
-<% provide :title, t(".publishers_title_name") %>
+<% provide :title, t(".publishers_title") %>
 
 <div class="well well-small"><h1><%= t ".publishers" %></h1></div>
 
@@ -35,8 +35,8 @@
   </div>
 </div>
 
-<%= render "admin/publishers/table_data" %>
-<%= render "admin/publishers/modal_create" %>
+<%= render "table_data" %>
+<%= render "modal_create" %>
 
 <div class="modal publisher-modal-edit">
   <div class="modal-dialog">

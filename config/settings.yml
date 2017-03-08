@@ -45,3 +45,8 @@ authors:
   params_page: 1
 authors_edit_form:
   per_rows: 4
+export_auth_excel:
+  date_time: "%Y%m%d%H%M%S"
+books:
+  per_page: 10
+  params_page: 1

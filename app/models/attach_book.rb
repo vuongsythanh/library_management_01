@@ -5,5 +5,5 @@ class AttachBook < ApplicationRecord
   validates :number_page, presence: true
   validates :limit_date, presence: true
   validates :description,
-    length: {maximum: Settings.attack_book.description_size}
+    length: {maximum: Settings.attach_book.description_size}
 end
