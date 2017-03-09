@@ -1,0 +1,24 @@
+<table class="table table-user-information">
+  <tbody>
+    <tr>
+      <td><%= t ".role" %></td>
+      <td><%= @user.is_admin %></td>
+    </tr>
+    <tr>
+      <td><%= t ".created_at" %></td>
+      <td><%= @user.created_at.strftime("%D") %></td>
+    </tr>
+    <tr>
+      <td><%= t ".name" %></td>
+      <td><%= @user.name %></td>
+    </tr>
+    <tr>
+      <td><%= t ".email" %></td>
+      <td><%= @user.email %></td>
+    </tr
+     <tr>
+      <td><%= t ".phone" %></td>
+      <td><%= @user.phone %></td>
+    </tr>
+  </tbody>
+</table>

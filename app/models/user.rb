@@ -17,7 +17,6 @@ class User < ApplicationRecord
   validates :phone, presence: true, length: {maximum: Settings.user.phone_size}
   validates :avatar,
     length: {maximum: Settings.user.avatar_size}
-  validates :is_admin, presence: true
 
   has_secure_password
 

@@ -6,12 +6,11 @@ module UsersHelper
     end
   end
 
-  def correct_user
-    @user = User.find_by id: params[:id]
-    redirect_to admin_users_path unless @user == current_user
-  end
-
-  def admin_user
-    redirect_to root_path unless current_user.is_admin?
+  def logged_admin
+    if current_user.is_admin?
+      flash[:success] = t "admin_welcome"
+    else
+      redirect_to root_path
+    end
   end
 end
