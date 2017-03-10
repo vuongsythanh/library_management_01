@@ -46,4 +46,3 @@ config/database.yml
 
 #Ignore file test
 test/
-

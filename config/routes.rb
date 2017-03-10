@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get "(page/:page)", action: :index, on: :collection, as: ""
     end
     resources :categories, concerns: :paginatable
+    resources :users
   end
   get "english", to: "set_language#english"
   get "vietnam", to: "set_language#vietnam"

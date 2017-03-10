@@ -1,24 +1,14 @@
-<div class="bs-example">
-  <input type="button" class="btn btn-primary hide-modal"
-    value=<%= t ".create_user" %> />
-  <div id="modal_create_user" class="modal fade">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"
-            aria-hidden="true">&times;
-          </button>
-          <h4 class="modal-title"><%= t ".create_user" %></h4>
-        </div>
-        <div class="modal-body">
-          <%= render "admin/shared/error_messages" %>
-          <%= render "form" %>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default"
-            data-dismiss="modal"><%= t ".close" %>
-          </button>
-        </div>
+<div id="modal_create_user" class="modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-hidden="true">&times;
+        </button>
+        <h4 class="modal-title"><%= t ".create_user" %></h4>
+      </div>
+      <div class="modal-body">
+        <%= render "form" %>
       </div>
     </div>
   </div>

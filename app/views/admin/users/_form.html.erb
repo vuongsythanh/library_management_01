@@ -1,36 +1,46 @@
 <%= form_for [:admin, @user] do |f| %>
+  <div class="md-form">
+    <i class="fa fa-user prefix"></i>&nbsp;<%= f.label t ".name" %>
+    <%= f.text_field :name,
+      placeholder: t(".ex_name"), class: "form-control" %>
+  </div>
+  <div class="md-form">
+  <i class="fa fa-envelope prefix"></i>&nbsp;<%= f.label t ".email" %>
+    <%= f.text_field :email,
+      placeholder: t(".ex_email"), class: "form-control" %>
+  </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, class: "form-control", required: true %>
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>&nbsp;<%= f.label t ".password" %>
+    <%= f.password_field :password,
+      placeholder: t(".ex_password"), class: "form-control" %>
+  </div>
 
-  <%= f.label :email %>
-  <%= f.text_field :email, class: "form-control", required: true %>
+  <div class="md-form">
+    <i class="fa fa-lock prefix"></i>&nbsp;<%= f.label t ".password_confirm" %>
+    <%= f.password_field :password_confirmation,
+      placeholder: t(".ex_password_confirmation"), class: "form-control" %>
+  </div>
 
-  <%= f.label :password %>
-  <%= f.password_field :password, class: "form-control", required: true %>
+  <div class="md-form">
+    <i class="fa fa-phone prefix"></i>&nbsp;<%= f.label t ".phone" %>
+    <%= f.text_field :phone,
+      placeholder: t(".ex_phone"), class: "form-control" %>
+  </div>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, class: "form-control",
-    required: true %>
-
-  <p>
+  <div class="md-form">
     <%= f.label :is_admin do %>
       <%= f.radio_button :is_admin, :fasle, checked: true %>
-      <span><%= t ".user" %></span>
+      <span><%= t ".member" %></span>
     <% end %>
-  </p>
 
-  <p>
     <%= f.label :is_admin do %>
       <%= f.radio_button :is_admin, :true %>
       <span><%= t ".admin" %></span>
     <% end %>
-  </p>
+  </div>
 
-  <p>
-    <%= f.label :phone %>
-    <%= f.text_field :phone, class: "form-control", required: true %>
-  </p>
-
-  <p><%= f.submit t(".create"), class: "btn btn-primary" %></p>
+  <div class="modal-footer">
+    <%= f.submit t(".create_user"), class: "btn btn-primary" %>
+  </div>
 <% end %>

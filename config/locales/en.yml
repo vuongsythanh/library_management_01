@@ -1,4 +1,29 @@
 en:
+  dictionary:
+    name: &name Name
+    phone: &phone Phone
+    email: &email email
+    role: &role role
+    admin: &admin Admin
+    member: &member Member
+    create_user: &create_user "Create User"
+    password: &password Password
+    password_confirm: &password_confirm "Password Confirm"
+    edit: &edit Edit
+    update: &update Update
+    show: &show Showe
+    delete: &delete Delete
+    save: &save Save
+  admin_hello: "Hello Admin!"
+  app_name_app: "Library Management App"
+  user_logged: "Log in succsess!"
+  user_fail: "Invalid email/password combination"
+  user_login: "Please log in."
+  user_nil: "User nil!"
+  create_user_fail: "Create user Fail!"
+  create_user_success: "Created succsess user!"
+  user_updated_success: "Update user success"
+  user_updated_fail: "Update user fail"
   views:
     pagination:
       first: "&laquo; First"
@@ -6,12 +31,6 @@ en:
       previous: "&lsaquo; Prev"
       next: "Next &rsaquo;"
       truncate: "&hellip;"
-  app_name: "Library Management App"
-  user_logged: "Log in succsess!"
-  user_fail: "Invalid email/password combination"
-  user_login: "Please log in."
-  create_user_fail: "Create user Fail!"
-  create_user_success: "Created succsess user!"
   layouts:
     application:
       app_name_app: "Library Management"
@@ -67,21 +86,21 @@ en:
         name: "Categories Name"
         number_book: "Number of Books"
         action: "Action"
-        edit: "Edit"
-        delete: "Delete"
+        edit: *edit
+        delete: *delete
         are_you_sure: "Are you sure delete this item?"
         new_category_button: "New Categories"
         update_cate_title: "Update Category"
         no_data: "No data!"
       modal_create:
         new_category_title: "Create news categories"
-        name: "Name"
+        name: *name
         description: "Description"
         create: "Create category"
       category_edit_form:
-        name: "Name"
+        name: *name
         description: "Description"
-        save: "Save"
+        save: *save
       create:
         create_success: "Categories created Succesfully!"
         create_not_success: "Categories was not created!"
@@ -94,22 +113,50 @@ en:
         not_load_category: "Not found category!"
     users:
       index:
-        name: "Name"
-        email: "Email"
-        role: "Role"
+        name: *name
+        email: *email
+        role: *role
         options: "Options"
-        admin: "Admin"
-        member: "Member"
-        show: "Show"
-        edit: "Edit"
-        delete: "Delete"
+        admin: *admin
+        member: *member
+        show: *show
+        edit: *edit
+        delete: *delete
         all_users: "All users"
         confirm: "Are_you_sure"
+        user_list: "Users list"
       modal_create_form:
-        create_user: "Create User"
+        create_user: *create_user
         close: "Close"
       form:
-        create: "Create"
+        create_user: *create_user
+        name: *name
+        email: *email
+        password: *password
+        password_confirm: *password_confirm
+        member: *member
+        admin: *admin
+        role: *role
+        phone: *phone
+        ex_password: "ex: 123456789"
+        ex_name: "ex: John"
+        ex_email: "ex: john@gmail.com"
+        ex_password_confirmation: "ex: 123456789"
+        ex_phone: "ex: +84 123 456 789"
+      form_user:
+        role: *role
+        created_at: "Created_at"
+        name: *name
+        email: *email
+        phone: *phone
+      edit:
+        edit_user: "Edit User"
+      show:
+        profile: "Profile"
+      form_table:
+        show: *show
+      user_edit_form:
+        save: *save
     shared:
       error_messages:
         error: "Error"

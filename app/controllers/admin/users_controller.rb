@@ -1,27 +1,51 @@
 class Admin::UsersController < ApplicationController
-  before_action :logged_in_user, except: [:new, :create, :show]
-  before_action :admin_user
-  before_action :correct_user, only: [:edit, :update]
+  before_action :logged_in_user
+  before_action :logged_admin, except: :show
+  before_action :load_user, except: [:index, :new, :create]
 
   def index
-    @users = User.select(:id, :name, :email, :is_admin).page(params[:page])
-      .order(create_at: desc)
-      .per Settings.users_controllers.per_page
+    @users = User.select(:id, :name, :email, :is_admin).order(created_at: :desc)
+      .page(params[:page]).per Settings.users_controllers.per_page
     @user = User.new
+  end
+
+  def show
+  end
+
+  def edit
+    respond_to do |format|
+      format.html{render partial: "user_edit_form", locals: {user: @user}}
+    end
   end
 
   def create
     @user = User.new user_params
     if @user.save
       flash[:success] = t ".create_user_success"
-      redirect_to admin_users_path
     else
       flash[:danger] = t ".create_user_fail"
-      render :new
     end
+    redirect_to admin_users_url
+  end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t ".user_updated_success"
+    else
+      flash[:danger] = t ".user_updated_fail"
+    end
+    redirect_to admin_users_url
   end
 
   private
+
+  def load_user
+    @user = User.find_by id: params[:id]
+    if @user.nil?
+      flash[:danger] = t "user_nil"
+      redirect_to admin_users_url
+    end
+  end
 
   def user_params
     params.require(:user).permit :name, :email, :password,

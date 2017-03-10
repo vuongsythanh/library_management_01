@@ -1,5 +1,52 @@
-<% provide :title, t ".all_users" %>
-<h1><%= t ".all_users" %></h1>
-<%= render "modal_create_form" %>
-<%= render "form_table" %>
-<%= paginate @users, theme: "twitter-bootstrap-3" %>
+<% provide :title, t(".user_list") %>
+<div class="container">
+  <div class="page-header">
+    <h1><%= t "users_manager" %></h1>
+  </div>
+  <p>
+    <%= t "total_user" %>:
+    <span class="label label-primary">
+      <%= @users.length %>
+    </span>
+  </p>
+  <p>
+    <%= t "total_is_admin_member" %>:
+  </p>
+  <p>
+    <%= t "total_is_admin" %>:
+  </p>
+  <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="btn-toolbar">
+          <%= render "modal_create_form" %>
+        </div>
+      </div>
+    </div>
+  <hr>
+
+  <p>
+    <%= link_to t(".new_user"), "#", class: "btn btn-primary",
+      data: {toggle: "modal", target: "#modal_create_user"} %>
+  </p>
+
+  <%= render "form_table" %>
+
+  <div class="modal user-modal-edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="modal_edit_cate_label">
+            <%= t ".update" %>
+          </h4>
+        </div>
+        <div class="modal-body-user-edit">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
