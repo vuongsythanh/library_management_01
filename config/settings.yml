@@ -31,7 +31,7 @@ user:
   avatar_size: 200
 categories:
   per_page: 10
-  categories_per_page: 10
+  params_page: 1
 users_controllers:
   per_page: 10
 categories_edit_form:

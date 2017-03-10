@@ -1,0 +1,50 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".index" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".number_book" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @categories.any? %>
+      <% @categories.each_with_index do |category, index| %>
+        <tr>
+          <td class="text-center">
+            <% params[:page] ||= Settings.categories.params_page %>
+            <%= index_continue params[:page], index, Settings.categories.per_page %>
+          </td>
+          <td><%= link_to category.name, "#" %></td>
+          <td class="text-center"><%= category.books.size %></td>
+          <td class="text-center">
+            <%= link_to edit_admin_category_path(category), title: t(".edit"),
+              class: "btn-edit-category btn btn-warning" do %>
+              <span class="glyphicon glyphicon-edit"></span>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <%= link_to admin_category_path(category), title: t(".delete"),
+              method: :delete,
+              data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
+              <span class="glyphicon glyphicon-trash"></span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" class="no-data"><%= t ".no_data" %></td></tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div class="row">
+  <div class="col-lg-7">
+     <%= t ".show" %><%= Settings.categories.per_page %> <%= t ".of" %>
+     <%= Category.all.size %> <%= t ".record" %><br>
+  </div>
+  <div class="col-lg-5">
+      <%= paginate @categories, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>

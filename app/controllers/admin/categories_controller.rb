@@ -2,9 +2,10 @@ class Admin::CategoriesController < ApplicationController
   before_action :load_category, except: [:create,:index]
 
   def index
+    @category = Category.new
     @categories = Category.select(:id, :name).order(created_at: :desc)
       .includes(:books).page(params[:page]).per Settings.categories.per_page
-    @category = Category.new
+    @categories = @categories.search_name params[:search] if params[:search].present?
   end
 
   def create
@@ -34,13 +35,17 @@ class Admin::CategoriesController < ApplicationController
   end
 
   def destroy
-    if @category.destroy
-      flash[:success] = t ".delete_success"
-    else
+    if @category.books.any?
       flash[:danger] = t ".delete_not_success"
+    else
+      if @category.destroy
+        flash[:success] = t ".delete_success"
+      else
+        flash[:danger] = t ".delete_not_success"
+      end
     end
     respond_to do |format|
-      format.html {redirect_to admin_categories_url}
+      format.html{redirect_to admin_categories_url}
     end
   end
 
