@@ -3,9 +3,15 @@ class Admin::CategoriesController < ApplicationController
 
   def index
     @category = Category.new
-    @categories = Category.select(:id, :name).order(created_at: :desc)
-      .includes(:books).page(params[:page]).per Settings.categories.per_page
-    @categories = @categories.search_name params[:search] if params[:search].present?
+    if params[:search]
+      @categories = Category.all.includes(:books)
+        .search_name(params[:search]).order(created_at: :desc)
+        .page(params[:page]).per Settings.categories.per_page
+    else
+      @categories = Category.select(:id, :name).includes(:books)
+        .order(created_at: :desc).page(params[:page])
+        .per Settings.categories.per_page
+    end
   end
 
   def create
@@ -23,7 +29,9 @@ class Admin::CategoriesController < ApplicationController
 
   def edit
     respond_to do |format|
-      format.html{render partial: "category_edit_form", locals: {category: @category}}
+      format.html{
+        render partial: "category_edit_form", locals: {category: @category}
+      }
     end
   end
 

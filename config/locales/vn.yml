@@ -83,12 +83,15 @@ vn:
     new:
       log_in: "Đăng nhập"
   admin:
+    export_cate_excel:
+      index:
+        category_name_record: "Categories-"
+        xls: ".xls"
     categories:
       index:
         categories_title_name: "Danh mục Sách"
         categories: "Danh mục Sách"
         name: "Tên danh mục"
-        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         new_category_button: "Tạo danh mục mới"
         update_cate_title: "Cập nhật danh mục"
         tool: "Công cụ "
@@ -115,6 +118,7 @@ vn:
       load_category:
         not_load_category: "Không tìm thấy danh mục!"
       table_data:
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
         index: "STT"
         name: "Tên danh mục"
         number_book: "Số sách"

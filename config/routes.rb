@@ -1,18 +1,20 @@
 Rails.application.routes.draw do
-  namespace :admin do
-    concern :paginatable do
-      get "(page/:page)", action: :index, on: :collection, as: ""
+    namespace :admin do
+      concern :paginatable do
+        get "(page/:page)", action: :index, on: :collection, as: ""
+      end
+      resources :categories, concerns: :paginatable
+      resources :users
+      resources :export_cate_excel
     end
-    resources :categories, concerns: :paginatable
-    resources :users
-  end
-  get "english", to: "set_language#english"
-  get "vietnam", to: "set_language#vietnam"
-  get "contact", to: "static_pages#contact"
-  get "about", to: "static_pages#about"
-  get "help", to: "static_pages#help"
-  root "static_pages#home"
-  get "/login", to: "sessions#new"
-  post "/login", to: "sessions#create"
-  delete "/logout", to: "sessions#destroy"
+
+    get "english", to: "set_language#english"
+    get "vietnam", to: "set_language#vietnam"
+    get "contact", to: "static_pages#contact"
+    get "about", to: "static_pages#about"
+    get "help", to: "static_pages#help"
+    root "static_pages#home"
+    get "/login", to: "sessions#new"
+    post "/login", to: "sessions#create"
+    delete "/logout", to: "sessions#destroy"
 end
