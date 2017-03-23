@@ -1,0 +1,67 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".index" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".show" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @publishers.any? %>
+      <% @publishers.each_with_index do |publisher, index| %>
+        <tr>
+          <td class="text-center">
+            <% params[:page] ||= Settings.publisher.params_page %>
+            <%= index_continue params[:page], index, Settings.publisher.per_page %>
+          </td>
+          <td><%= publisher.name %></td>
+          <td><%= publisher.email %></td>
+          <td class="text-center">
+            <%= link_to admin_publisher_path(publisher), title: t(".show"),
+              class: "btn-show-publisher btn btn-primary" do %>
+              <span class="glyphicon glyphicon-zoom-in"></span>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <%= link_to edit_admin_publisher_path(publisher), title: t(".edit"),
+              class: "btn-edit-publisher btn btn-warning" do %>
+              <span class="glyphicon glyphicon-edit"></span>
+            <% end %>
+          </td>
+          <td class="text-center">
+            <%= link_to admin_publisher_path(publisher), title: t(".delete"),
+              method: :delete,
+              data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
+              <span class="glyphicon glyphicon-trash"></span>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr><td colspan="6" class="text-center no-data"><%= t ".no_data" %></td></tr>
+    <% end %>
+  </tbody>
+  <thead>
+    <tr>
+      <th><%= t ".index" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".show" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+</table>
+
+<div class="row">
+  <div class="col-lg-7">
+    <%= t ".show" %><%= Settings.publisher.per_page %><%= t ".of" %>
+    <%= @publisher_size %><%= t ".record" %>
+  </div>
+  <div class="col-lg-5">
+    <%= paginate @publishers, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>

@@ -1,20 +1,32 @@
-<div class="modal fade" id="modal_create_cate" tabindex="-1"
-  role="dialog" aria-labelledby="modal_create_cate_label">
+<div class="modal fade" id="modal_create_pub" tabindex="-1"
+  role="dialog" aria-labelledby="modal_create_pub_label">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="modal_create_cate_label">
-          <%= t ".new_category_title" %>
+        <h4 class="modal-title" id="modal_create_pub_label">
+          <%= t ".new_publisher_title" %>
         </h4>
       </div>
       <div class="modal-body">
-        <%= form_for [:admin, @category] do |f| %>
+        <%= form_for [:admin, @publisher] do |f| %>
           <div class="form-group">
             <p><%= f.label t ".name" %></p>
             <p><%= f.text_field :name, class: "form-control", required: true %></p>
+          </div>
+          <div class="form-group">
+            <p><%= f.label t ".address" %></p>
+            <p><%= f.text_area :address, class: "form-control", required: true %></p>
+          </div>
+          <div class="form-group">
+            <p><%= f.label t ".phone" %></p>
+            <p><%= f.text_field :phone, class: "form-control", required: true %></p>
+          </div>
+          <div class="form-group">
+            <p><%= f.label t ".email" %></p>
+            <p><%= f.text_field :email, class: "form-control", required: true %></p>
           </div>
           <div class="form-group">
             <p><%= f.label t ".description" %></p>

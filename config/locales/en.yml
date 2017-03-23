@@ -79,9 +79,48 @@ en:
     new:
       log_in: "Log in"
   admin:
-    export_cate_excel:
+    authors:
       index:
-        category_name_record: "Categories-"
+        authors_title: "Authors List"
+        authors: "Authors List"
+        name: "Authors Name"
+        new_author_button: "New Authors"
+        update_auth_title: "Update Author"
+        export_to_excel: "Export to excel"
+        input_authors_name: "Input authors name..."
+      modal_create:
+        new_author_title: "Create news authors"
+        name: "Authors name"
+        description: "Description"
+        create: "Create author"
+      author_edit_form:
+        name: "Authors name"
+        description: "Description"
+        save: "Save"
+      create:
+        create_success: "Authors created Succesfully!"
+        create_not_success: "Authors was not created!"
+      destroy:
+        delete_auth_not_success: "Could not delete author has books!"
+        delete_success: "Authors deleted Succesfully!"
+        delete_not_success: "Authors was not deleted!"
+      update:
+        update_success: "Authors updated Succesfully!"
+      load_category:
+        not_load_author: "Not found author!"
+      table_data:
+        are_you_sure: "Are you sure delete this item?"
+        index: "Index"
+        name: "Authors Name"
+        show: "Showing "
+        edit: "Edit"
+        delete: "Delete"
+        no_data: "No data!"
+        of: " /"
+        record: " All records"
+    export_auth_excel:
+      index:
+        author_name_record: "Authors-"
         xls: ".xls"
     categories:
       index:
@@ -90,8 +129,6 @@ en:
         name: "Categories Name"
         new_category_button: "New Categories"
         update_cate_title: "Update Category"
-        tool: "Tools "
-        print: "Print"
         export_to_excel: "Export to excel"
         input_categories_name: "Input categories name..."
       modal_create:
@@ -107,6 +144,7 @@ en:
         create_success: "Categories created Succesfully!"
         create_not_success: "Categories was not created!"
       destroy:
+        delete_cate_not_success: "Could not delete categories has books!"
         delete_success: "Categories deleted Succesfully!"
         delete_not_success: "Categories was not deleted!"
       update:
@@ -122,8 +160,69 @@ en:
         delete: "Delete"
         no_data: "No data!"
         show: "Showing "
-        of: "/"
-        record: "All records"
+        of: " /"
+        record: " All records"
+    export_cate_excel:
+      index:
+        category_name_record: "Categories-"
+        xls: ".xls"
+    publishers:
+      index:
+        publishers_title_name: "Publishers List"
+        publishers: "Publishers List"
+        name: "Publishers Name"
+        new_publisher_button: "New Publishers"
+        update_pub_title: "Update Publisher"
+        export_to_excel: "Export to excel"
+        input_publishers_name: "Input publishers name..."
+      modal_create:
+        new_publisher_title: "Create news publishers"
+        name: "Publishers name"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        description: "Description"
+        create: "Create publisher"
+      publisher_edit_form:
+        name: "Publishers name"
+        address: "Address"
+        phone: "Phone"
+        email: "Email"
+        description: "Description"
+        save: "Save"
+      modal_show_form:
+        name: "Name:"
+        address: "Address:"
+        phone: "Phone:"
+        email: "Email:"
+        description: "Description:"
+      create:
+        create_success: "Publishers created Succesfully!"
+        create_not_success: "Publishers was not created!"
+      destroy:
+        delete_pub_not_success: "Could not delete publisher has books!"
+        delete_success: "Publishers deleted Succesfully!"
+        delete_not_success: "Publishers was not deleted!"
+      update:
+        update_success: "Publishers updated Succesfully!"
+        update_not_success: "Publishers could not updated!"
+      load_publisher:
+        not_load_publisher: "Not found Publisher!"
+      table_data:
+        are_you_sure: "Are you sure delete this item?"
+        email: "Email"
+        index: "Index"
+        name: "Publishers Name"
+        show: "Showing "
+        edit: "Edit"
+        delete: "Delete"
+        no_data: "No data!"
+        of: " /"
+        record: " All records"
+    export_pub_excel:
+      index:
+        publisher_name_record: "Publishers-"
+        xls: ".xls"
     users:
       index:
         name: *name
