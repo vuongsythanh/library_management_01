@@ -1,5 +1,6 @@
 class Admin::CategoriesController < ApplicationController
   before_action :load_category, except: [:create,:index]
+  before_action :load_category_size, only: :index
 
   def index
     @category = Category.new
@@ -44,7 +45,7 @@ class Admin::CategoriesController < ApplicationController
 
   def destroy
     if @category.books.any?
-      flash[:danger] = t ".delete_not_success"
+      flash[:danger] = t ".delete_cate_not_success"
     else
       if @category.destroy
         flash[:success] = t ".delete_success"
@@ -66,5 +67,9 @@ class Admin::CategoriesController < ApplicationController
 
   def category_params
     params.require(:category).permit :name, :description
+  end
+
+  def load_category_size
+    @category_size = Category.all.size
   end
 end

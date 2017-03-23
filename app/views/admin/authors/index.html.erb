@@ -1,29 +1,29 @@
-<% provide :title, t(".categories_title_name") %>
+<% provide :title, t(".authors_title") %>
 
-<div class="well well-small"><h1><%= t ".categories" %></h1></div>
+<div class="well well-small"><h1><%= t ".authors" %></h1></div>
 
 <div class="row heigh_table_with_button">
   <div class="col-md-2">
     <%= link_to "#", class: "btn btn-primary",
-      data: {toggle: "modal", target: "#modal_create_cate"} do %>
+      data: {toggle: "modal", target: "#modal_create_auth"} do %>
       <span><i class="fa fa-plus-square" aria-hidden="true"></i></span>
-      <%= t ".new_category_button" %>
+      <%= t ".new_author_button" %>
     <% end %>
   </div>
   <div class="col-md-2">
     <button class="btn btn-default btn-space">
-      <%= link_to admin_export_cate_excel_index_path(params.merge(format: :xls).permit!) do %>
+      <%= link_to admin_export_auth_excel_index_path(params.merge(format: :xls).permit!) do %>
         <span><i class="fa fa-download" aria-hidden="true"></i></span>
         <%= t ".export_to_excel" %>
       <% end %>
     </button>
   </div>
   <div class="col-md-8">
-    <%= form_tag admin_categories_path, method: :get do %>
+    <%= form_tag admin_authors_path, method: :get do %>
       <div id="custom-search-input">
         <div class="input-group col-md-12">
           <%= text_field_tag :search, params[:search], class: "form-control",
-            placeholder: t(".input_categories_name") %>
+            placeholder: t(".input_authors_name") %>
           <span class="input-group-btn">
             <%= button_tag type: "submit", class: "btn btn-default" do %>
               <span class="glyphicon glyphicon-search"></span>
@@ -31,25 +31,25 @@
           </span>
         </div>
       </div>
-    <% end  %>
+    <% end %>
   </div>
 </div>
 
-<%= render "admin/categories/table_data" %>
-<%= render "admin/categories/modal_create" %>
+<%= render "admin/authors/table_data" %>
+<%= render "admin/authors/modal_create" %>
 
-<div class="modal category-modal-edit">
+<div class="modal author-modal-edit">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h4 class="modal-title" id="modal_edit_cate_label">
-          <%= t ".update_cate_title" %>
+        <h4 class="modal-title" id="modal_edit_author_label">
+          <%= t ".update_author_title" %>
         </h4>
       </div>
-      <div class="modal-body-category-edit">
+      <div class="modal-body-author-edit">
 
       </div>
     </div>

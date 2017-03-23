@@ -42,7 +42,7 @@
 <div class="row">
   <div class="col-lg-7">
      <%= t ".show" %><%= Settings.categories.per_page %> <%= t ".of" %>
-     <%= Category.all.size %> <%= t ".record" %><br>
+     <%= @category_size %> <%= t ".record" %><br>
   </div>
   <div class="col-lg-5">
       <%= paginate @categories, theme: "twitter-bootstrap-3" %>
