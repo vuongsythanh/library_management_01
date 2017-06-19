@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :export_pub_excel
     resources :authors
     resources :export_auth_excel
+    root "dashboards#index"
   end
 
   get "english", to: "set_language#english"

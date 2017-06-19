@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
+  layout "dashboard"
   before_action :load_category, except: [:create,:index]
   before_action :load_category_size, only: :index
-
   def index
     @category = Category.new
     if params[:search]

@@ -1,4 +1,5 @@
 class Admin::AuthorsController < ApplicationController
+  layout "dashboard"
   before_action :load_author, except: [:create, :index]
   before_action :load_author_size, only: :index
 
