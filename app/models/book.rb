@@ -9,7 +9,10 @@ class Book < ApplicationRecord
   belongs_to :category
   belongs_to :publisher
 
+  delegate :name, to: :author, prefix: true, allow_nil: true
+  delegate :name, to: :category, prefix: true, allow_nil: true
+  delegate :name, to: :publisher, prefix: true, allow_nil: true
+
   validates :title, presence: true, length: {maximum: Settings.book.title_size}
   validates :description, length: {maximum: Settings.book.description_size}
-  validates :status, presence: true
 end

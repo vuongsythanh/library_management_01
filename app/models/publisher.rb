@@ -13,5 +13,5 @@ class Publisher < ApplicationRecord
   validates :description,
     length: {maximum: Settings.publisher.description_size}
 
-  scope :search_name, lambda{|name| where "name like ?", "%#{name}%"}
+  scope :search_name, lambda {|name| where "name like ?", "%#{name}%"}
 end

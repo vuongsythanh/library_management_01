@@ -8,9 +8,9 @@ class Admin::ExportCateExcelController < ApplicationController
         .order created_at: :desc
     end
     respond_to do |format|
-      format.html
       format.xls{
-        filename = t(".category_name_record") << "#{Time.now.strftime("%Y%m%d%H%M%S")}" << t(".xls")
+        filename = t(".category_name_record") << "#{Time.now.strftime(Settings
+          .export_auth_excel.date_time)}" << t(".xls")
         send_data(
           @categories.to_a.to_xls,
           type: "text/xls; charset=utf-8; header=present",

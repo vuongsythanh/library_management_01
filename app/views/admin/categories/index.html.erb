@@ -1,4 +1,4 @@
-<% provide :title, t(".categories_title_name") %>
+<% provide :title, t(".categories_title") %>
 
 <div class="well well-small text-center"><h1><%= t ".categories" %></h1></div>
 
@@ -36,8 +36,8 @@
 </div>
 <br><br>
 
-<%= render "admin/categories/table_data" %>
-<%= render "admin/categories/modal_create" %>
+<%= render "table_data" %>
+<%= render "modal_create" %>
 
 <div class="modal category-modal-edit">
   <div class="modal-dialog">

@@ -78,6 +78,7 @@ en:
   sessions:
     new:
       log_in: "Log in"
+
   admin:
     authors:
       index:
@@ -88,28 +89,34 @@ en:
         update_auth_title: "Update Author"
         export_to_excel: "Export to excel"
         input_authors_name: "Input authors name..."
+
       modal_create:
         new_author_title: "Create news authors"
         name: "Authors name"
         description: "Description"
         create: "Create author"
+
       author_edit_form:
         name: "Authors name"
         description: "Description"
         save: "Save"
+
       create:
         create_success: "Authors created Succesfully!"
         create_not_success: "Authors was not created!"
+
       destroy:
         delete_auth_not_success: "Could not delete author has books!"
         delete_success: "Authors deleted Succesfully!"
         delete_not_success: "Authors was not deleted!"
+
       update:
         update_success: "Authors updated Succesfully!"
+
       load_category:
         not_load_author: "Not found author!"
+
       table_data:
-        are_you_sure: "Are you sure delete this item?"
         index: "Index"
         name: "Authors Name"
         show: "Showing "
@@ -118,71 +125,122 @@ en:
         no_data: "No data!"
         of: " /"
         record: " All records"
+
+      table_data_if_auths_any:
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure delete this item ?"
+
     export_auth_excel:
       index:
         author_name_record: "Authors-"
         xls: ".xls"
+
     categories:
+      show:
+        category_book_title: "Books of category"
+        categories: "Category "
+        new_book_button: "New Books"
+        export_to_excel: "Export to excel"
+        input_books_name: "Input books name or categories name..."
+        image: "Image"
+        book: "Books"
+        category: "Category"
+        status: "Status"
+        show: "Show "
+        edit: "Edit"
+        delete: "Delete"
+        no_data: "No data!"
+        of: " /"
+        record: " All records"
+        back: "Back"
+
+      show_table_data_if_cate_book_any:
+        title: "Title: "
+        author: "Authors: "
+        publisher: "Publishers: "
+        available: "Available"
+        no_available: "No Available"
+        show: "Show "
+        edit: "Edit"
+        delete: "Delete"
+
       index:
-        categories_title_name: "Categories List"
+        categories_title: "Categories List"
         categories: "Categories List"
         name: "Categories Name"
         new_category_button: "New Categories"
         update_cate_title: "Update Category"
         export_to_excel: "Export to excel"
         input_categories_name: "Input categories name..."
+
       modal_create:
         new_category_title: "Create news categories"
         name: "Categories name"
         description: "Description"
         create: "Create category"
+
       category_edit_form:
         name: "Categories name"
         description: "Description"
         save: "Save"
+
       create:
         create_success: "Categories created Succesfully!"
         create_not_success: "Categories was not created!"
+
       destroy:
         delete_cate_not_success: "Could not delete categories has books!"
         delete_success: "Categories deleted Succesfully!"
         delete_not_success: "Categories was not deleted!"
+        delete_cate_not_success: "Could not delete categories has books"
+
       update:
         update_success: "Categories updated Succesfully!"
+
       load_category:
         not_load_category: "Not found category!"
+
       table_data:
-        are_you_sure: "Are you sure delete this item?"
         index: "Index"
         name: "Categories Name"
         number_book: "Number Books"
+        show: "Showing "
         edit: "Edit"
         delete: "Delete"
         no_data: "No data!"
-        show: "Showing "
         of: " /"
         record: " All records"
+
+      table_data_if_cates_any:
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure delete this item?"
+
     export_cate_excel:
       index:
         category_name_record: "Categories-"
         xls: ".xls"
+
     publishers:
       index:
-        publishers_title_name: "Publishers List"
+        publishers_title: "Publishers List"
         publishers: "Publishers List"
-        name: "Publishers Name"
         new_publisher_button: "New Publishers"
         update_pub_title: "Update Publisher"
         export_to_excel: "Export to excel"
         input_publishers_name: "Input publishers name..."
+        update_pub_title: "Update Publishers"
+
       modal_create:
-        new_publisher_title: "Create news publishers"
+        new_publisher_title: "Create new publishers"
         name: "Publishers name"
         address: "Address"
         phone: "Phone"
         email: "Email"
         description: "Description"
         create: "Create publisher"
+
       publisher_edit_form:
         name: "Publishers name"
         address: "Address"
@@ -190,26 +248,31 @@ en:
         email: "Email"
         description: "Description"
         save: "Save"
+
       modal_show_form:
         name: "Name:"
         address: "Address:"
         phone: "Phone:"
         email: "Email:"
         description: "Description:"
+
       create:
         create_success: "Publishers created Succesfully!"
         create_not_success: "Publishers was not created!"
+
       destroy:
         delete_pub_not_success: "Could not delete publisher has books!"
         delete_success: "Publishers deleted Succesfully!"
         delete_not_success: "Publishers was not deleted!"
+
       update:
         update_success: "Publishers updated Succesfully!"
         update_not_success: "Publishers could not updated!"
+
       load_publisher:
         not_load_publisher: "Not found Publisher!"
+
       table_data:
-        are_you_sure: "Are you sure delete this item?"
         email: "Email"
         index: "Index"
         name: "Publishers Name"
@@ -219,10 +282,49 @@ en:
         no_data: "No data!"
         of: " /"
         record: " All records"
+
+      table_data_if_pubs_any:
+        show: "Showing "
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure delete this item?"
+
     export_pub_excel:
       index:
         publisher_name_record: "Publishers-"
         xls: ".xls"
+
+    books:
+      index:
+        books_title: "Books List"
+        books: "Books List"
+        new_book_button: "New Books"
+        export_to_excel: "Export to excel"
+        input_books_name: "Input books name or categories name..."
+
+      table_data:
+        image: "Image"
+        book: "Books"
+        category: "Category"
+        status: "Status"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        no_data: "No data!"
+        of: " /"
+        record: " All records"
+
+      table_data_if_books_any:
+        title: "Title: "
+        author: "Authors: "
+        publisher: "Publishers: "
+        available: "Available"
+        no_available: "No Available"
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        are_you_sure: "Are you sure delete this item?"
+
     users:
       index:
         name: *name
