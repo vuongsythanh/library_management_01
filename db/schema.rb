@@ -132,10 +132,10 @@ ActiveRecord::Schema.define(version: 20170224070600) do
     t.string   "address"
     t.string   "phone"
     t.string   "avatar"
-    t.boolean  "is_admin",        default: false
+    t.boolean  "is_admin"
     t.boolean  "remember_digest"
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.index ["email", "phone"], name: "index_users_on_email_and_phone", unique: true, using: :btree
   end
 

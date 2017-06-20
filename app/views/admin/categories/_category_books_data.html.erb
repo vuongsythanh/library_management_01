@@ -1,0 +1,33 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".image" %></th>
+      <th><%= t ".book" %></th>
+      <th><%= t ".category" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".show" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @cate_books.any? %>
+      <%= render "category_books_data_if_any" %>
+    <% else %>
+      <tr>
+        <td colspan="7" class="text-center no-data"><%= t ".no_data" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+   <thead>
+    <tr>
+      <th><%= t ".image" %></th>
+      <th><%= t ".book" %></th>
+      <th><%= t ".category" %></th>
+      <th><%= t ".status" %></th>
+      <th><%= t ".show" %></th>
+      <th><%= t ".edit" %></th>
+      <th><%= t ".delete" %></th>
+    </tr>
+  </thead>
+</table>

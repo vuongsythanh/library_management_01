@@ -32,9 +32,28 @@ vn:
       next: "Trước &rsaquo;"
       truncate: "&hellip;"
   layouts:
+    dashboard_sub:
+      Library_Management: "Hệ thống quản lý thư viện điện tử"
+      languages: "Ngôn ngữ"
+      vietnam: "Việt Nam"
+      english: "Tiếng Anh"
+      profile: "Hồ sơ"
+      logout: "Đăng xuất"
+      Home: "Trang chính"
+      Categories: "Danh Mục Sách"
+      Books: "Sách"
+      Authors: "Tác giả"
+      Publishers: "Nhà phát hành"
+      Request_books: "Yêu cầu mượn sách"
+      Users: "Thành viên"
     application:
       app_name_app: "Quản lý thư viện trực tuyến"
     header:
+      dashboard: "Trang quản trị"
+      account: "Tài khoản"
+      Profile: "Hồ sơ"
+      Login: "Đăng nhập"
+      Logout: "Đăng xuất"
       app_name: "Hệ thống quản lý Thư viện trực tuyến"
       home: "Trang chủ"
       help: "Trợ giúp"
@@ -43,6 +62,8 @@ vn:
       english: "English"
       vietnam: "Việt Nam"
       languages: "Ngôn ngữ"
+      all_member: "Thành viên"
+      settings: "Cài đặt"
     footer:
       footer_link1: "HTQL thư viện trực tuyến"
       footer_link2: "viết bởi Thanh && Hai"
@@ -59,28 +80,20 @@ vn:
       home_content: "Đây là trang chủ của Hệ thống"
       home_link1: "quản lý Thư viện trực tuyến"
       home_signup: "Đăng ký ngay !"
-    help:
-      help_title_name: "Trợ giúp"
-      help_title: "Trợ giúp"
-      help_content: "Nhận sự trợ giúp về HT tại"
-      help_link1: "trang hướng dẫn sử dụng"
-      help_content2: "để nhận sự trợ giúp về ứng dụng này, vui lòng truy cập"
-      help_link2: "hướng dẫn sử dụng"
-    about:
-      about_title_name: "Về chúng tôi"
-      about_title: "Về chúng tôi"
-      about_link_tutorial: "HTQL thư viện là ứng dụng quản lý thư viện sách"
-      about_content: "Đây là ứng dụng chạy thử nghiệm của HTQL thư viện trực tuyến"
-    contact:
-      contact_title_name: "Liên hệ"
-      contact_title: "Liên hệ"
-      contact_content: "Liên hệ với quản trị viên tại"
-      contact_link: "trang liên hệ"
   sessions:
     new:
       log_in: "Đăng nhập"
 
   admin:
+    dashboards:
+      index:
+        framgia_library_management: "Hệ thống quản lý thư viện điện tử"
+        View_details: "xem chi tiết"
+        Categories: "danh mục sách"
+        Authors: "tác giả"
+        Publishers: "nhà phát hành"
+        Users: "thành viên"
+
     authors:
       index:
         authors_title: "Danh sách các tác giả"
@@ -127,7 +140,7 @@ vn:
         of: " /"
         record: " Tổng số bản ghi"
 
-      table_data_if_auths_any:
+      sub_table_data:
         edit: "Sửa"
         delete: "Xóa"
         are_you_sure: "Bạn có chắc chắn muốn xóa ?"
@@ -143,7 +156,7 @@ vn:
         categories: "Danh mục "
         new_book_button: "Tạo mới sách"
         export_to_excel: "Xuất file excel"
-        input_books_name: "Vui lòng nhập tên sách hoặc tên danh mục sách"
+        input_books_name: "Vui lòng nhập tên sách"
         image: "ảnh"
         book: "Thông tin sách"
         category: "Danh mục"
@@ -156,15 +169,10 @@ vn:
         record: " Tổng số bản ghi"
         back: "Quay lại"
 
-      show_table_data_if_cate_book_any:
-        title: "Title: "
-        author: "Authors: "
-        publisher: "Publishers: "
-        available: "Available"
-        no_available: "No Available"
-        show: "Show "
-        edit: "Edit"
-        delete: "Delete"
+      sub_table_data:
+        edit: "sửa"
+        delete: "xóa"
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
 
       index:
         categories_title: "Danh mục Sách"
@@ -213,7 +221,13 @@ vn:
         of: " /"
         record: " Tổng số bản ghi"
 
-      table_data_if_cates_any:
+      sub_show:
+        title: "Tiêu đề"
+        author: "tác giả"
+        publisher: "nhà phát hành"
+        available: "còn"
+        no_available: "hết"
+        show: "Hiển thị"
         edit: "Sửa"
         delete: "Xóa"
         are_you_sure: "Bạn có chắc chắn muốn xóa?"
@@ -284,7 +298,7 @@ vn:
         of: " /"
         record: " Tổng số bản ghi"
 
-      table_data_if_pubs_any:
+      sub_table_data:
         show: "Hiển thị "
         edit: "Sửa"
         delete: "Xóa"
@@ -296,12 +310,32 @@ vn:
         xls: ".xls"
 
     books:
+      destroy:
+        delete_success: "xóa thành công!"
+        delete_not_success: "xóa thất bại!"
+
+      load_book:
+        not_load_book: "không thể tải dữ liệu sách"
+
+      modal_show_form:
+        date_add: "Ngày thêm"
+        no_available: "hết"
+        available: "còn"
+        title: "tiêu đề"
+        categories: "danh mục"
+        publish_date: "ngày phát hành"
+        author: "tác giả"
+        publisher: "nhà phát hành"
+        number_pages: "số trang"
+        limit_date: "số ngày mượn"
+        description: "mô tả"
+
       index:
         books_title: "Danh sách - Sách"
         books: "Danh sách - Sách"
         new_book_button: "Tạo sách mới"
         export_to_excel: "Xuất dữ liệu excel"
-        input_books_name: "Vui lòng nhập tên sách hoặc tên danh mục sách..."
+        input_books_name: "Vui lòng nhập tên sách"
 
       table_data:
         image: "Ảnh"
@@ -315,19 +349,30 @@ vn:
         of: " /"
         record: " Tổng số bản ghi"
 
-      table_data_if_books_any:
+      sub_table_data:
         title: "Tên sách: "
         author: "Tác giả: "
         publisher: "Nhà phát hành: "
-        available: "Có sẵn"
-        no_available: "Không có sẵn"
+        available: "Còn"
+        no_available: "Hết"
         show: "Hiển thị"
         edit: "Sửa"
         delete: "Xóa"
         are_you_sure: "Bạn có chắc chắn muốn xóa?"
 
-    users:
+    export_book_excel:
       index:
+        book_name_record: "Sách-"
+        xls: ".xls"
+
+    users:
+      sub_table_data:
+        are_you_sure: "Bạn có chắc chắn muốn xóa?"
+      table_data:
+        avatar: "ảnh đại diện"
+      index:
+        title: "Danh sách thành viên"
+        all_members: "Danh sách thành viên"
         name: *name
         email: *email
         role: *role

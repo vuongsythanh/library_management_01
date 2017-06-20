@@ -1,0 +1,32 @@
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th><%= t ".avatar" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".phone" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".actions" %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @users.any? %>
+      <%= render "sub_table_data" %>
+    <% else %>
+      <tr>
+        <td colspan="5" class="text-center no-data"><%= t ".no_data" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <thead>
+    <tr>
+      <th><%= t ".avatar" %></th>
+      <th><%= t ".name" %></th>
+      <th><%= t ".phone" %></th>
+      <th><%= t ".email" %></th>
+      <th><%= t ".actions" %></th>
+    </tr>
+  </thead>
+</table>
+<div class="row">
+  <%= paginate @users, theme: "twitter-bootstrap-3" %>
+</div>

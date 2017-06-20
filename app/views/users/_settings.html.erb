@@ -1,0 +1,53 @@
+<%= form_for current_user, html: {id: "update-box"} do |f| %>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+      <%= f.text_field :name, class: "form-control",
+        placeholder: ".input_name" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-envelope-o"></i></div>
+      <%= f.email_field :email, class: "form-control",
+        placeholder: ".input_email" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-address-card-o "></i></div>
+      <%= f.text_field :address, class: "form-control",
+        placeholder: ".input_address" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+      <%= f.text_field :phone, class: "form-control",
+        placeholder: ".input_phone"%>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+          <%= f.password_field :password, class: "form-control",
+            placeholder: ".input_password" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6">
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+          <%= f.password_field :password_confirmation, class: "form-control",
+            placeholder: ".input_password_confimartion" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.submit ".update_profile", class: "btn btn-block btn-primary" %>
+  </div>
+<% end %>

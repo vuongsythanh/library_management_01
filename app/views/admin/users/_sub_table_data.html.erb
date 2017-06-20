@@ -1,0 +1,20 @@
+<% @users.each_with_index do |user, index| %>
+  <tr>
+    <td class="img-responsive text-center">
+      <%= gravatar_for user, size: Settings.user.default_size %>
+    </td>
+    <td class="text-center"><%= user.name %></td>
+    <td class="text-center"><%= user.phone %></td>
+    <td class="text-center"><%= user.email %></td>
+    <td class="text-center">
+      <% if current_user.is_admin? %>
+        <%= link_to admin_user_path(user), method: :delete,
+          data: {confirm: t(".confirm")}, class: "btn btn-danger" do %>
+          <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      <% else %>
+        <span class="label label-danger"><%= t ".no_role" %></span>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

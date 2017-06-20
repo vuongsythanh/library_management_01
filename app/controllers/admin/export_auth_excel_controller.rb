@@ -1,4 +1,5 @@
 class Admin::ExportAuthExcelController < ApplicationController
+  before_action :verify_admin?
   def index
     if params[:search]
       @authors = Author.all.includes(:books)

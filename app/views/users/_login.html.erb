@@ -1,0 +1,21 @@
+<div id="login-error"></div>
+<%= form_for :session, html: {id: "login-box"},
+  remote: true, method: :post, url: login_path do |f| %>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+      <%= f.email_field :email, class: "form-control",
+        placeholder: ".input_email" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="input-group">
+      <div class="input-group-addon"><i class="fa fa-key fa-fw"></i></div>
+      <%= f.password_field :password, class: "form-control",
+        placeholder: "input_password" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.submit "Login", class: "btn btn-block btn-primary" %>
+  </div>
+<% end %>

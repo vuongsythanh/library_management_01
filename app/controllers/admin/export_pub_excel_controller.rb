@@ -1,4 +1,5 @@
 class Admin::ExportPubExcelController < ApplicationController
+  before_action :verify_admin?
   def index
     if params[:search]
       @publishers = Publisher.all.includes(:books)

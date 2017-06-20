@@ -15,4 +15,6 @@ class Book < ApplicationRecord
 
   validates :title, presence: true, length: {maximum: Settings.book.title_size}
   validates :description, length: {maximum: Settings.book.description_size}
+
+  scope :search_name, lambda {|title| where "title like ?", "%#{title}%"}
 end

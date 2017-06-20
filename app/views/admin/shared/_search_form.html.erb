@@ -1,0 +1,11 @@
+<div class="custom-search-input">
+  <div class="input-group col-md-6">
+    <%= text_field_tag :search, params[:search],placeholder: "input_search",
+      class: "form-control" %>
+    <span class="input-group-btn">
+      <%= button_tag class: "btn btn-info" do %>
+        <i class="glyphicon glyphicon-search"></i>
+      <% end %>
+    </span>
+  </div>
+</div>

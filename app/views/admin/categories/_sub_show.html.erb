@@ -1,4 +1,4 @@
-<% @cate_books.each_with_index do |book, index| %>
+<% @category_book.each_with_index do |book, index| %>
   <tr>
     <td class="img-responsive img_size">
       <%= image_tag book.image if book.image? %>
@@ -24,7 +24,7 @@
       <% if book.status %>
         <p><span class="label label-success"><%= t ".available" %></span></p>
       <% else %>
-        <p><span class="label label-warning"><%= t ".no_available" %></span></p>
+        <p><span class="label label-danger"><%= t ".no_available" %></span></p>
       <% end %>
     </td>
     <td class="text-center"><p></p>
@@ -40,7 +40,7 @@
       <% end %>
     </td>
     <td class="text-center"><p></p>
-      <%= link_to "#", title: t(".delete"), method: :delete,
+      <%= link_to admin_book_path(book), title: t(".delete"), method: :delete,
         data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
         <span class="glyphicon glyphicon-trash"></span>
       <% end %>

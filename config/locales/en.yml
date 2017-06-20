@@ -32,9 +32,26 @@ en:
       next: "Next &rsaquo;"
       truncate: "&hellip;"
   layouts:
+    dashboard_sub:
+      Library_Management: "Library Management"
+      languages: "Languages"
+      vietnam: "Viet Nam"
+      english: "English"
+      Home: "Home"
+      Categories: "Categories"
+      Books: "Books"
+      Authors: "Authors"
+      Publishers: "Publishers"
+      Request_books: "Request Books"
+      Users: "Users"
     application:
       app_name_app: "Library Management"
     header:
+      dashboard: "Dashboard"
+      account: "Account"
+      Profile: "Profile"
+      Login: "Login"
+      Logout: "Logout"
       app_name: "Library Management"
       home: "Home"
       help: "Help"
@@ -43,6 +60,8 @@ en:
       english: "English"
       vietnam: "VietNam"
       languages: "Languages"
+      all_member: "All Members"
+      settings: "Settings"
     footer:
       footer_link1: "Library Management"
       footer_link2: "by Thanh && Hai"
@@ -56,30 +75,20 @@ en:
       home_content: "This is the home page for the"
       home_link1: "Library Management"
       home_signup: "Sign up now!"
-    help:
-      help_title_name: "Help"
-      help_title: "Help"
-      help_content: "Get help on the Library Management at the"
-      help_link1: "Library Management help page"
-      help_content2: "To get help on this Library Management, see the"
-      help_link2: "Library Management"
-    about:
-      about_title_name: "About"
-      about_title: "About"
-      about_link_tutorial: "The Library Management"
-      about_content: "This is the Library Managementlication is the
-        first application."
-    contact:
-      contact_title_name: "Contact"
-      contact_title: "Contact"
-      contact_content: "Contact the Library Management about the
-        Library Management at the"
-      contact_link: "contact page"
   sessions:
     new:
       log_in: "Log in"
 
   admin:
+    dashboards:
+      index:
+        framgia_library_management: "Framgia 's Library Management"
+        View_details: "View details"
+        Categories: "Categories"
+        Authors: "authors"
+        Publishers: "publishers"
+        Users: "Users"
+
     authors:
       index:
         authors_title: "Authors List"
@@ -126,7 +135,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_auths_any:
+      sub_table_data:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure delete this item ?"
@@ -142,7 +151,7 @@ en:
         categories: "Category "
         new_book_button: "New Books"
         export_to_excel: "Export to excel"
-        input_books_name: "Input books name or categories name..."
+        input_books_name: "Input books name..."
         image: "Image"
         book: "Books"
         category: "Category"
@@ -155,15 +164,10 @@ en:
         record: " All records"
         back: "Back"
 
-      show_table_data_if_cate_book_any:
-        title: "Title: "
-        author: "Authors: "
-        publisher: "Publishers: "
-        available: "Available"
-        no_available: "No Available"
-        show: "Show "
+      sub_table_data:
         edit: "Edit"
         delete: "Delete"
+        are_you_sure: "Are you sure delete this item ?"
 
       index:
         categories_title: "Categories List"
@@ -212,7 +216,13 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_cates_any:
+      sub_show:
+        title: "Title"
+        author: "Author"
+        publisher: "Publisher"
+        available: "Available"
+        no_available: "No available"
+        show: "Hiển thị"
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure delete this item?"
@@ -283,7 +293,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_pubs_any:
+      sub_table_data:
         show: "Showing "
         edit: "Edit"
         delete: "Delete"
@@ -295,12 +305,32 @@ en:
         xls: ".xls"
 
     books:
+      destroy:
+        delete_success: "delete this books succsessfully!"
+        delete_not_success: "delete this books not succsessfully!"
+
+      load_book:
+        not_load_book: "can not load books"
+
+      modal_show_form:
+        date_add: "Date add"
+        no_available: "no available"
+        available: "available"
+        title: "title"
+        categories: "category"
+        publish_date: "publish date"
+        author: "author"
+        publisher: "publisher"
+        number_pages: "number page"
+        limit_date: "limit date"
+        description: "description"
+
       index:
         books_title: "Books List"
         books: "Books List"
         new_book_button: "New Books"
         export_to_excel: "Export to excel"
-        input_books_name: "Input books name or categories name..."
+        input_books_name: "Input books name"
 
       table_data:
         image: "Image"
@@ -314,7 +344,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_books_any:
+      sub_table_data:
         title: "Title: "
         author: "Authors: "
         publisher: "Publishers: "
@@ -325,8 +355,15 @@ en:
         delete: "Delete"
         are_you_sure: "Are you sure delete this item?"
 
+    export_book_excel:
+      index:
+        book_name_record: "Books-"
+        xls: ".xls"
+
     users:
       index:
+        title: "All member"
+        all_members: "Danh sách thành viên"
         name: *name
         email: *email
         role: *role
