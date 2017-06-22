@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+  layout "dashboard"
   before_action :logged_in_user
   before_action :logged_admin, except: :show
   before_action :load_user, except: [:index, :new, :create]
