@@ -17,13 +17,16 @@ class Admin::PublishersController < ApplicationController
 
   def show
     respond_to do |format|
-      format.html{render partial: "modal_show_form", locals: {publisher: @publisher}}
+      format.html{render partial: "modal_show_form",
+        locals: {publisher: @publisher}}
     end
   end
 
   def edit
     respond_to do |format|
-      format.html{render partial: "publisher_edit_form"}
+      format.html{render partial: "publisher_edit_form",
+        locals: {publisher: @publisher}
+      }
     end
   end
 

@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     resources :export_pub_excel
     resources :authors
     resources :export_auth_excel
+    resources :books
   end
-
   get "english", to: "set_language#english"
   get "vietnam", to: "set_language#vietnam"
   get "contact", to: "static_pages#contact"

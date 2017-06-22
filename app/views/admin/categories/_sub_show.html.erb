@@ -1,0 +1,49 @@
+<% @category_book.each_with_index do |book, index| %>
+  <tr>
+    <td class="img-responsive img_size">
+      <%= image_tag book.image if book.image? %>
+    </td>
+    <td>
+      <div>
+        <span class="glyphicon glyphicon-book"></span>
+        <b><%= t ".title" %></b> <%= book.title.upcase %>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-user"></span>
+        <b><%= t ".author" %></b> <%= book.author_name %>
+      </div>
+      <div>
+        <span class="glyphicon glyphicon-home"></span>
+        <b><%= t ".publisher" %></b> <%= book.publisher_name %>
+      </div>
+    </td>
+    <td class="text-center">
+      <p></p><%= book.category_name %>
+    </td>
+    <td class="text-center">
+      <% if book.status %>
+        <p><span class="label label-success"><%= t ".available" %></span></p>
+      <% else %>
+        <p><span class="label label-warning"><%= t ".no_available" %></span></p>
+      <% end %>
+    </td>
+    <td class="text-center"><p></p>
+      <%= link_to "#", title: t(".show"),
+        class: "btn-show-publisher btn btn-primary" do %>
+        <span class="glyphicon glyphicon-zoom-in"></span>
+      <% end %>
+    </td>
+    <td class="text-center"><p></p>
+      <%= link_to "#", title: t(".edit"),
+        class: "btn-edit-publisher btn btn-warning" do %>
+        <span class="glyphicon glyphicon-edit"></span>
+      <% end %>
+    </td>
+    <td class="text-center"><p></p>
+      <%= link_to "#", title: t(".delete"), method: :delete,
+        data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
+        <span class="glyphicon glyphicon-trash"></span>
+      <% end %>
+    </td>
+  </tr>
+<% end %>

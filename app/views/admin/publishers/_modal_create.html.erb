@@ -14,23 +14,33 @@
         <%= form_for [:admin, @publisher] do |f| %>
           <div class="form-group">
             <p><%= f.label t ".name" %></p>
-            <p><%= f.text_field :name, class: "form-control", required: true %></p>
+            <p>
+              <%= f.text_field :name, class: "form-control", required: true %>
+            </p>
           </div>
           <div class="form-group">
             <p><%= f.label t ".address" %></p>
-            <p><%= f.text_area :address, class: "form-control", required: true %></p>
+            <p>
+              <%= f.text_field :address, class: "form-control", required: true %>
+            </p>
           </div>
           <div class="form-group">
             <p><%= f.label t ".phone" %></p>
-            <p><%= f.text_field :phone, class: "form-control", required: true %></p>
+            <p>
+              <%= f.text_field :phone, class: "form-control", required: true %>
+            </p>
           </div>
           <div class="form-group">
             <p><%= f.label t ".email" %></p>
-            <p><%= f.text_field :email, class: "form-control", required: true %></p>
+            <p>
+              <%= f.text_field :email, class: "form-control", required: true %>
+            </p>
           </div>
           <div class="form-group">
             <p><%= f.label t ".description" %></p>
-            <p><%= f.text_area :description, class: "form-control", required: true %></p>
+            <p>
+              <%= f.text_area :description, class: "form-control", required: true %>
+            </p>
           </div>
           <%= f.submit t(".create"), class: "btn btn-primary btn-block" %>
         <% end %>

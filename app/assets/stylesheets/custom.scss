@@ -125,8 +125,10 @@ th {
 
 .pagination {
   display: -webkit-box !important;
-  padding-left: 0 !important;
-  margin: 0 !important;
   border-radius: 4px !important;
-  margin-left: 30px !important;
+}
+
+.img_size img{
+  width: 50px;
+  height: 60px;
 }
