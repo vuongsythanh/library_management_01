@@ -11,8 +11,8 @@
     </tr>
   </thead>
   <tbody>
-    <% if @books.any? %>
-      <%= render "sub_table_data" %>
+    <% if @cate_books.any? %>
+      <%= render "category_books_data_if_any" %>
     <% else %>
       <tr>
         <td colspan="7" class="text-center no-data"><%= t ".no_data" %></td>
@@ -31,13 +31,3 @@
     </tr>
   </thead>
 </table>
-
-<div class="row">
-  <div class="col-lg-7">
-     <%= t ".show" %><%= Settings.books.per_page %><%= t ".of" %>
-     <%= @book_size %><%= t ".record" %>
-  </div>
-  <div class="col-lg-5">
-    <%= paginate @books, theme: "twitter-bootstrap-3" %>
-  </div>
-</div>

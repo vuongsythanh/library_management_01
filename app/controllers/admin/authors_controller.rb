@@ -20,10 +20,10 @@ class Admin::AuthorsController < ApplicationController
     respond_to do |format|
       if @author.save
         flash[:success] = t ".create_success"
-        format.html{redirect_to admin_authors_url}
+        format.html {redirect_to admin_authors_url}
       else
         flash[:danger] = t ".create_not_success"
-        format.html{redirect_to admin_authors_url}
+        format.html {redirect_to admin_authors_url}
       end
     end
   end
@@ -40,7 +40,7 @@ class Admin::AuthorsController < ApplicationController
     if @author.update_attributes author_params
       flash[:success] = t ".update_success"
     end
-    redirect_to :back
+    redirect_to admin_authors_url
   end
 
   def destroy

@@ -31,9 +31,6 @@ vn:
       previous: "&lsaquo; Sau"
       next: "Trước &rsaquo;"
       truncate: "&hellip;"
-  app_name: "ứng dụng chạy thử nghiệm về HTQL Thư viện"
-  user_logged: "Đăng nhập thành công!"
-  user_fail: "lỗi email hoặc mật khẩu!"
   layouts:
     application:
       app_name_app: "Quản lý thư viện trực tuyến"

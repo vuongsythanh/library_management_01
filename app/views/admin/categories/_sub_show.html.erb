@@ -1,4 +1,4 @@
-<% @category_book.each_with_index do |book, index| %>
+<% @cate_books.each_with_index do |book, index| %>
   <tr>
     <td class="img-responsive img_size">
       <%= image_tag book.image if book.image? %>
@@ -18,7 +18,7 @@
       </div>
     </td>
     <td class="text-center">
-      <p></p><%= book.category_name %>
+      <p><%= book.category_name %></p>
     </td>
     <td class="text-center">
       <% if book.status %>
@@ -28,8 +28,8 @@
       <% end %>
     </td>
     <td class="text-center"><p></p>
-      <%= link_to "#", title: t(".show"),
-        class: "btn-show-publisher btn btn-primary" do %>
+      <%= link_to admin_book_path(book), title: t(".show"),
+        class: "btn-show-book btn btn-primary" do %>
         <span class="glyphicon glyphicon-zoom-in"></span>
       <% end %>
     </td>

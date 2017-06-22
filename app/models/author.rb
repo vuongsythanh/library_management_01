@@ -6,5 +6,5 @@ class Author < ApplicationRecord
   validates :description,
     length: {maximum: Settings.author.description_size}
 
-  scope :search_name, lambda{|name| where "name like ?", "%#{name}%"}
+  scope :search_name, lambda {|name| where "name like ?", "%#{name}%"}
 end

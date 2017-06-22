@@ -35,10 +35,10 @@ class Admin::PublishersController < ApplicationController
     respond_to do |format|
       if @publisher.save
         flash[:success] = t ".create_success"
-        format.html{redirect_to admin_publishers_url}
+        format.html {redirect_to admin_publishers_url}
       else
         flash[:danger] = t ".create_not_success"
-        format.html{redirect_to admin_publishers_url}
+        format.html {redirect_to admin_publishers_url}
       end
     end
   end
@@ -49,7 +49,13 @@ class Admin::PublishersController < ApplicationController
     else
       flash[:danger] = t ".update_not_success"
     end
-    redirect_to :back
+    redirect_to admin_publishers_url
+  end
+
+  def edit
+    respond_to do |format|
+      format.html{render partial: "publisher_edit_form"}
+    end
   end
 
   def destroy
@@ -63,7 +69,7 @@ class Admin::PublishersController < ApplicationController
       end
     end
     respond_to do |format|
-      format.html{redirect_to admin_publishers_url}
+      format.html {redirect_to admin_publishers_url}
     end
   end
 

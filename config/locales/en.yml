@@ -250,11 +250,11 @@ en:
         save: "Save"
 
       modal_show_form:
-        name: "Name: "
-        address: "Address: "
-        phone: "Phone: "
-        email: "Email: "
-        description: "Description: "
+        name: "Name:"
+        address: "Address:"
+        phone: "Phone:"
+        email: "Email:"
+        description: "Description:"
 
       create:
         create_success: "Publishers created Succesfully!"
