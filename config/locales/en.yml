@@ -32,6 +32,18 @@ en:
       next: "Next &rsaquo;"
       truncate: "&hellip;"
   layouts:
+    dashboard_sub:
+      Library_Management: "Library Management"
+      languages: "Languages"
+      vietnam: "Viet Nam"
+      english: "English"
+      Home: "Home"
+      Categories: "Categories"
+      Books: "Books"
+      Authors: "Authors"
+      Publishers: "Publishers"
+      Request_books: "Request Books"
+      Users: "Users"
     application:
       app_name_app: "Library Management"
     header:
@@ -80,6 +92,15 @@ en:
       log_in: "Log in"
 
   admin:
+    dashboards:
+      index:
+        framgia_library_management: "Framgia 's Library Management"
+        View_details: "View details"
+        Categories: "Categories"
+        Authors: "authors"
+        Publishers: "publishers"
+        Users: "Users"
+
     authors:
       index:
         authors_title: "Authors List"
@@ -126,7 +147,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_auths_any:
+      sub_table_data:
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure delete this item ?"
@@ -142,7 +163,7 @@ en:
         categories: "Category "
         new_book_button: "New Books"
         export_to_excel: "Export to excel"
-        input_books_name: "Input books name or categories name..."
+        input_books_name: "Input books name..."
         image: "Image"
         book: "Books"
         category: "Category"
@@ -155,15 +176,10 @@ en:
         record: " All records"
         back: "Back"
 
-      show_table_data_if_cate_book_any:
-        title: "Title: "
-        author: "Authors: "
-        publisher: "Publishers: "
-        available: "Available"
-        no_available: "No Available"
-        show: "Show "
+      sub_table_data:
         edit: "Edit"
         delete: "Delete"
+        are_you_sure: "Are you sure delete this item ?"
 
       index:
         categories_title: "Categories List"
@@ -212,7 +228,13 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_cates_any:
+      sub_show:
+        title: "Title"
+        author: "Author"
+        publisher: "Publisher"
+        available: "Available"
+        no_available: "No available"
+        show: "Hiển thị"
         edit: "Edit"
         delete: "Delete"
         are_you_sure: "Are you sure delete this item?"
@@ -283,7 +305,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_pubs_any:
+      sub_table_data:
         show: "Showing "
         edit: "Edit"
         delete: "Delete"
@@ -295,6 +317,26 @@ en:
         xls: ".xls"
 
     books:
+      destroy:
+        delete_success: "delete this books succsessfully!"
+        delete_not_success: "delete this books not succsessfully!"
+
+      load_book:
+        not_load_book: "can not load books"
+
+      modal_show_form:
+        date_add: "Date add"
+        no_available: "no available"
+        available: "available"
+        title: "title"
+        categories: "category"
+        publish_date: "publish date"
+        author: "author"
+        publisher: "publisher"
+        number_pages: "number page"
+        limit_date: "limit date"
+        description: "description"
+
       index:
         books_title: "Books List"
         books: "Books List"
@@ -314,7 +356,7 @@ en:
         of: " /"
         record: " All records"
 
-      table_data_if_books_any:
+      sub_table_data:
         title: "Title: "
         author: "Authors: "
         publisher: "Publishers: "
