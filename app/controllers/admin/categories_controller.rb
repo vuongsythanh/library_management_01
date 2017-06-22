@@ -15,6 +15,11 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def show
+    @category_book = @category.books.order(created_at: :desc)
+      .page(params[:page]).per Settings.categories.per_page
+  end
+
   def create
     @category = Category.new category_params
     respond_to do |format|

@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20170224070600) do
   create_table "attach_books", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.datetime "publish_date"
     t.integer  "number_page"
-    t.datetime "limit_date"
+    t.integer  "limit_date"
     t.text     "description",  limit: 65535
     t.integer  "book_id"
     t.datetime "created_at",                 null: false
