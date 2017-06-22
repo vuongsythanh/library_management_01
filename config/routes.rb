@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :authors
     resources :export_auth_excel
     resources :books
+    resources :export_book_excel
   end
   get "english", to: "set_language#english"
   get "vietnam", to: "set_language#vietnam"
