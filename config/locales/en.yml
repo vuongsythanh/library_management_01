@@ -1,4 +1,38 @@
 en:
+  sesions:
+    create:
+      login_success: "Login fail!"
+      login_fail: "Login succsessfully!"
+  admin:
+    destroy:
+      user_destroy_success: "user was destroyed succsessfully!"
+      user_destroy_fail: "user was not destroyed!"
+  users:
+    show:
+      name: "Name"
+      role: "Role"
+      address: "Address"
+      email: "Email"
+      phone_number: "Phone"
+    index:
+      all_members: "All members"
+      title: "All members"
+    sub_table_data:
+      no_role: "No role"
+    table_data:
+      phone: "Phone number"
+      email: "Email"
+      name: "Name"
+      avatar: "Avatar"
+      actions: "Actions"
+    load_user:
+      user_nil: "Empty user!"
+    create:
+      create_user_success: "created users succsessfully!"
+      create_user_fail: "can not created users!"
+    update:
+      user_updated_success: "updated users succsessfully!"
+      user_updated_fail: "can not updated users!"
   dictionary:
     name: &name "Name"
     phone: &phone "Phone"
@@ -45,6 +79,18 @@ en:
       Request_books: "Request Books"
       Users: "Users"
     application:
+      dashboard_sub:
+       Library_Management: "Library Management"
+       languages: "Languages"
+       vietnam: "Viet Nam"
+       english: "English"
+       Home: "Home"
+       Categories: "Categories"
+       Books: "Books"
+       Authors: "Authors"
+       Publishers: "Publishers"
+       Request_books: "Request Books"
+       Users: "Users"
       app_name_app: "Library Management"
     header:
       dashboard: "Dashboard"

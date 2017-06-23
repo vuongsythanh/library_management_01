@@ -47,5 +47,12 @@ config/database.yml
 #Ignore file test
 test/
 
-#ignore img
-app/assets/images/framgia.jpg
+#Ignore folder idea
+.idea/
+
+#ignore file
+app/views/admin/users/_user_edit_form.html.erb
+app/views/admin/users/show.html.erb
+app/views/static_pages/about.html.erb
+app/views/static_pages/contact.html.erb
+app/views/static_pages/help.html.erb

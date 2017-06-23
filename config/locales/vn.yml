@@ -1,4 +1,39 @@
 vn:
+  sessions:
+    create:
+      login_success: "đăng nhập thành công!"
+      login_fail: "đăng nhập thất bại"
+  admin:
+    users:
+      destroy:
+      user_destroy_success: "xóa người dùng thành công!"
+      user_destroy_fail: "xóa thất bại!"
+  users:
+    show:
+      name: "Tên"
+      role: "Quyền"
+      address: "Địa chỉ"
+      email: "Thư điện tử"
+      phone_number: "SĐT"
+    index:
+      all_members: "Danh sách thành viên"
+      title: "danh sách thành viên"
+    sub_table_data:
+      no_role: "không được cấp quyền"
+    table_data:
+      phone: "số điện thoại"
+      email: "thư điện tử"
+      name: "tên"
+      avatar: "ảnh đại diện"
+      actions: "tùy chọn"
+    load_user:
+      user_nil: "người dùng trống!"
+    create:
+      create_user_success: "tạo mới thành công!"
+      create_user_fail: "không tạo mới được người dùng"
+    update:
+      user_updated_success: "cập nhật thành công!"
+      user_updated_fail: "không thể cập nhật người dùng!"
   dictionary:
     name: &name "Tên"
     phone: &phone "SĐT"

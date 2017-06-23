@@ -8,35 +8,46 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
-                <div class=" col-md-9 col-lg-9 ">
-                  <table class="table table-user-information">
-                    <tbody>
-                      <tr>
-                        <td><%= t ".name" %></td>
-                        <td><%= current_user.name %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t ".role" %></td>
-                        <td><%= current_user.is_admin ? "admin" : "member" %></td>
-                      </tr>
-                      <tr>
-                       <tr>
-                        <td><%= t ".address" %></td>
-                        <td><%= current_user.address %></td>
-                      </tr>
-                      <tr>
-                        <td><%= t ".email" %></td>
-                        <td><%= link_to current_user.email, "#" %></td>
-                      </tr>
-                      <td><%= t ".phone_number" %></td>
-                      <td><%= current_user.phone %></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+          <div class=" col-md-9 col-lg-9 ">
+            <table class="table table-user-information">
+              <tbody>
+                <tr>
+                  <td><%= t ".name" %></td>
+                  <td><%= current_user.name %></td>
+                </tr>
+                <tr>
+                  <td><%= t ".role" %></td>
+                  <td><%= current_user.is_admin ? "admin" : "member" %></td>
+                </tr>
+                <tr>
+                 <tr>
+                  <td><%= t ".address" %></td>
+                  <td><%= current_user.address %></td>
+                </tr>
+                <tr>
+                  <td><%= t ".email" %></td>
+                  <td><%= link_to current_user.email, "#" %></td>
+                </tr>
+                <td><%= t ".phone_number" %></td>
+                <td><%= current_user.phone %></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
+    <div class="panel-footer">
+      <a data-original-title="Broadcast Message" data-toggle="tooltip"
+        type="button" class="btn btn-primary">
+        <i class="glyphicon glyphicon-envelope"></i>
+      </a>
+      <span class="pull-right">
+        <%= link_to "#", data: {toggle: "modal", target: "#settingsModal"}, class: "btn btn-warning" do %>
+          <span class="glyphicon glyphicon-edit"></span>
+        <% end  %>
+      </span>
+    </div>
   </div>
+</div>
+</div>
+</div>
