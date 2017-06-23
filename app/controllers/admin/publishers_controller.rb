@@ -1,4 +1,5 @@
 class Admin::PublishersController < ApplicationController
+  layout "dashboard"
   before_action :load_publisher, except: [:create,:index]
   before_action :load_publisher_size, only: :index
 
