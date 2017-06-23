@@ -1,6 +1,6 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :load_category, except: [:create, :index]
-  before_action :load_cate_books, except: [:create, :index]
+  layout "dashboard"
+  before_action :load_category, except: [:create,:index]
   before_action :load_category_size, only: :index
 
   def index
@@ -69,11 +69,6 @@ class Admin::CategoriesController < ApplicationController
   def load_category
     @category = Category.find_by id: params[:id]
     flash[:info] = t ".not_load_category" if @category.nil?
-  end
-
-  def load_cate_books
-    @cate_books = @category.books.order(created_at: :desc)
-      .page(params[:page]).per Settings.categories.per_page
   end
 
   def category_params
