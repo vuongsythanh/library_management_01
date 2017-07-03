@@ -65,6 +65,7 @@ en:
       publisher: "Publisher"
       author: "Author"
       btn_search: "Search"
+      placeholder: "Input book 's name, authors or publishers..."
     footer:
       home: "Home"
       footer_link1: "Library Management"
@@ -83,10 +84,15 @@ en:
   static_pages:
     home:
       home_title_name: "Home"
-      home_title: "Welcome to the Library Management app"
+      home_title: "Welcome to the Library Management"
       home_content: "This is the home page for the"
       home_link1: "Library Management"
       home_signup: "Sign up now!"
+      book_name: "Book name"
+      available: "Available"
+      no_available: "No Available"
+      author_name: "Author name"
+      publisher_name: "Publisher name"
     help:
       help_title_name: "Help"
       help_title: "Help"

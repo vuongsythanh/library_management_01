@@ -10,17 +10,11 @@ $gray-medium-light: #eaeaea;
 
 body {
   padding-top: 59px;
+  background-color: #3d566e;
 }
 
 section {
   overflow: auto;
-}
-
-.center {
-  text-align: center;
-  h1 {
-    margin-bottom: 10px;
-  }
 }
 
 /* typography */
@@ -80,10 +74,6 @@ th {
   border-radius: 4px !important;
 }
 
-.img_size img {
-  width: 50px;
-  height: 60px;
-}
 
 #leftPanel {
   background-color: #777777;
@@ -132,7 +122,7 @@ th {
 /* header */
 
 .menu {
-  background-color: #e7e7e7;
+  background-color: #fff;
   width: 100%;
   height: auto;
   padding: 0 10px;
@@ -172,7 +162,7 @@ th {
 }
 
 .framgia_logo{
-  margin: -19px 20px;
+  margin: -21px 20px;
 }
 
 /* footer */
@@ -189,6 +179,7 @@ th {
   text-align: left;
   font: bold 16px sans-serif;
   padding: 15px 90px;
+  margin-top: 20px;
   .footer-left, .footer-center, .footer-right {
     display: inline-block;
     vertical-align: top;
@@ -302,14 +293,16 @@ th {
   }
 }
 
-/* banner + search*/
+/* banner + search +title */
+
 .popins-font {
   margin-bottom: -120px;
 }
 
 .bt-search-banner {
-  background: url("framgia_index.jpg") no-repeat;
-  padding: 178px 0px;
+  background: url(framgia_index.jpg) no-repeat;
+  padding: 90px 35px;
+  margin-bottom: 150px;
   text-align: center;
   .main-title h1 {
     margin-top: 30px;
@@ -321,12 +314,12 @@ th {
     background: rgba(0, 0, 0, 0.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     border: 1px solid #e3e3e3;
-    padding: 0 20px;
   }
 }
 
 .pt20 {
-  padding-top: 20px
+  padding-top: 20px;
+  background-color: #eee;
 }
 
 .container {
@@ -342,19 +335,11 @@ th {
   padding: 7px 11px;
 }
 
-.catagory-menu img {
-  margin-right: 15px;
-}
-
-.catagory-menu ul>li + li {
-  border-top: 1px solid #f1f1f1;
-}
-
 .catagory-menu {
   background-color: #fff;
   border: 1px solid #ededed;
   border-radius: 4px;
-  box-shadow: 0 1px 5px 0 rgba(205, 205, 205, 0.52);
+  box-shadow: 0px 1px 20px 0px rgba(205, 205, 205, 1.0);
 }
 
 .catagory-menu ul > li {
@@ -362,12 +347,11 @@ th {
   position: relative;
 }
 
-.catagory-menu ul li ul li a {
-  padding: 9px 20px;
-}
-
 .catagory-menu ul li:hover > a {
   color: #F32200;
+  background-color: #E1E1E1;
+  border-left: 7px solid red;
+  font-weight: bold;
 }
 
 ul {
@@ -379,24 +363,196 @@ ul {
 a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
-  color: #222
+  color: #222;
+  &:hover {
+    color: #F32200;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0 none;
+  }
+  &:active {
+    outline: 0 none;
+  }
+  &:focus {
+    outline: 0 none;
+  }
 }
 
-a:hover {
-  color: #F32200;
-  text-decoration: none;
-  cursor: pointer;
+#search {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+
+  -webkit-transform: translate(0px, -100%) scale(0, 0);
+  -moz-transform: translate(0px, -100%) scale(0, 0);
+  -o-transform: translate(0px, -100%) scale(0, 0);
+  -ms-transform: translate(0px, -100%) scale(0, 0);
+  transform: translate(0px, -100%) scale(0, 0);
+
+  opacity: 0;
 }
 
-a:active, a:hover {
-  outline: 0 none;
+#search.open {
+  -webkit-transform: translate(0px, 0px) scale(1, 1);
+  -moz-transform: translate(0px, 0px) scale(1, 1);
+  -o-transform: translate(0px, 0px) scale(1, 1);
+  -ms-transform: translate(0px, 0px) scale(1, 1);
+  transform: translate(0px, 0px) scale(1, 1);
+  opacity: 1;
 }
 
-a:focus {
-  outline: 0px solid
+#search input[type="search"] {
+  padding: 15px 40px;
+  position: absolute;
+  top: 50%;
+  width: 55%;
+  color: white;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0);
+  font-size: 30px;
+  font-weight: 300;
+  text-align: left;
+  border: 0px;
+  margin-top: -81px;
+  outline: none;
+  left: 320px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
 }
 
-img {
-  max-width: 100%;
-  height: auto
+#search .btn {
+  position: absolute;
+  top: 45%;
+  left: 48%;
+  margin-top: 61px;
+  padding: 10px 30px;
+}
+
+#search .close {
+  position: fixed;
+  right: 0px;
+  color: #fff;
+  opacity: 0.7;
+  padding: 10px 17px;
+  font-size: 27px;
+}
+
+input::placeholder {
+  color: white;
+  font-style: italic;
+}
+
+.jbt {
+  padding: 1px 30px;
+}
+
+.card {
+  background: #fff;
+  margin-bottom: 30px;
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 20px 0px rgba(205, 205, 205, 1.0);
+  }
+  .card-header {
+    padding: 1rem;
+    color: #fff;
+    margin-bottom: 0.5em;
+    background-color: #5faee3;
+    height: 105px;
+    .avatar {
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transition: all 0.15s ease-out 0s;
+        background-color: orange;
+        width: 105px;
+        height: 105px;
+        border-radius: 50%;
+        display: block;
+        margin-bottom: 0.5rem;
+        border: 3px solid #fff;
+        &:hover {
+          transform: scale(1.2);
+          margin-top: -30px;
+        }
+      }
+    }
+    .info {
+      float: right;
+      font-weight: bold;
+      h4 > a {
+        color: white;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          font-size: 85%;
+          font-weight: normal;
+          font-style: italic;
+          i {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  .card-body {
+    padding: 1rem;
+    .headline {
+      height: 3em;
+      font-style: italic;
+      margin-bottom: 2rem;
+      padding: 10px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+    ul {
+      list-style-type: none;
+      padding: 1rem;
+      background: #d9dcde;
+      margin-bottom: 0px;
+      li > span {
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+    }
+  }
+}
+
+.title {
+  color: #fff;
+  font-weight: bold;
+  font-style: inherit;
+}
+
+.heart {
+  float: left;
+  color: white;
+  background-color: #9b9b9b;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 8px 11px;
+  &:hover {
+    color: white;
+    background-color: #b92d33;
+  }
 }

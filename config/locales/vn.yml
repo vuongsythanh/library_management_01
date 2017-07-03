@@ -71,6 +71,8 @@ vn:
       publisher: "Nhà phát hành"
       author: "Tác giả"
       btn_search: "Tìm kiếm"
+      placeholder: "Nhập tên sách, tên tác giả hoặc tên nhà phát hành..."
+
     footer:
       home: "Trang chủ"
       footer_link1: "HTQL thư viện trực tuyến"
@@ -93,6 +95,11 @@ vn:
       home_content: "Đây là trang chủ của Hệ thống"
       home_link1: "quản lý Thư viện trực tuyến"
       home_signup: "Đăng ký ngay !"
+      book_name: "Tên sách"
+      available: "Còn"
+      no_available: "Hết"
+      author_name: "Tác giả"
+      publisher_name: "Nhà phát hành"
     help:
       help_title_name: "Trợ giúp"
       help_title: "Trợ giúp"

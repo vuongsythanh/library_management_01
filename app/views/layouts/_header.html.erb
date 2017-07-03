@@ -1,3 +1,5 @@
+<!--nav bar-->
+
 <nav class="navbar navbar-fixed-top">
   <div class="menu">
     <div class="container-fluid">
@@ -27,6 +29,9 @@
                 <%= link_to_unless I18n.locale == :en, t(".english"), locale: :en %>
               </li>
             </ul>
+          </li>
+          <li>
+            <a href="#search"><i class="glyphicon glyphicon-search"></i></a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -76,72 +81,22 @@
   </div>
 </nav>
 
-<!--slider area start-->
+<!--category + search + title -->
+
 <div class="slider-area pt20">
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-3">
         <div class="catagory-menu">
           <ul>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon2-20x25.png" alt=""></span>Women's
-                Clothing
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon3-20x25.png" alt=""></span>Men's
-                Clothing
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon4-20x25.png" alt=""></span>Home
-                & Garden
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon5-20x25.png" alt=""></span>Bags
-                & shoe
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon6-20x25.png" alt=""></span>Food
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon7-20x25.png" alt=""></span>Healthy
-                & Beauty
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon8-20x25.png" alt=""></span>Computer
-                & Office
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon9-20x25.png" alt=""></span>Photo
-                & Accessories
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon10-20x25.png" alt=""></span>Sports
-                & Outdoors
-              </a>
-            </li>
-            <li>
-              <a href="shop.html"><span>
-                <img src="img/icon/icon1-20x25.png" alt=""></span>Customar
-                Electronic
-              </a>
-            </li>
+            <% Category.all.take(11).each do |c| %>
+              <li>
+                <%= link_to "#" do %>
+                  <i class="glyphicon glyphicon-menu-right"></i>
+                  <%= c.name %>
+                <% end %>
+              </li>
+            <% end %>
           </ul>
         </div>
       </div>
@@ -159,4 +114,14 @@
     </div>
   </div>
 </div>
-<!--slider area end-->
+
+<!--modal search-->
+
+<div id="search">
+  <button type="button" class="close">×</button>
+  <%= form_tag "#", method: :get do %>
+    <%= search_field_tag nil, "",
+      placeholder: t(".placeholder") %>
+    <%= button_tag t(".btn_search"), type: "submit", class: "btn btn-primary" %>
+  <% end %>
+</div>
