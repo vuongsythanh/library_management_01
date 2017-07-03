@@ -47,5 +47,5 @@ config/database.yml
 #Ignore file test
 test/
 
-#ignore img
-app/assets/images/framgia.jpg
+#ignore folder idea
+.idea/

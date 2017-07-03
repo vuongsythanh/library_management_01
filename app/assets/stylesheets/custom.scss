@@ -9,7 +9,7 @@ $gray-medium-light: #eaeaea;
 /* universal */
 
 body {
-  padding-top: 60px;
+  padding-top: 59px;
 }
 
 section {
@@ -48,49 +48,6 @@ h2 {
 p {
   font-size: 1.1em;
   line-height: 1.7em;
-}
-
-/* header */
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
-  }
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
-  a {
-    color: $gray;
-    &:hover {
-      color: $gray-darker;
-    }
-  }
-  small {
-    float: left;
-  }
-  ul {
-    float: right;
-    list-style: none;
-    li {
-      float: left;
-      margin-left: 15px;
-    }
-  }
 }
 
 .users {
@@ -141,7 +98,7 @@ th {
   border-radius: 5px;
   background-image: -webkit-linear-gradient(left, #c4e17f, #c4e17f 12.5%,
     #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%,
-    #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%,#c49cde 62.5%, #c49cde 75%,
+    #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%,
     #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
   background-image: -moz-linear-gradient(left, #c4e17f, #c4e17f 12.5%,
     #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%,
@@ -170,4 +127,276 @@ th {
 
 .label {
   letter-spacing: 1px !important;
+}
+
+/* header */
+
+.menu {
+  background-color: #e7e7e7;
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+  position: fixed;
+  margin: 0px;
+  z-index: 1;
+}
+
+.menu .navbar-nav {
+  .active > a {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    border-bottom: 5px solid #ed2e2e;
+  }
+  li > a {
+    font-size: 15px;
+    color: black;
+    padding: 17px 25px;
+    &:hover {
+      border-bottom: 5px solid #ed2e2e;
+    }
+  }
+}
+
+.navbar-header > a {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+  text-decoration: none;
+  color: #222222;
+  font-size: 25px;
+  padding: 12px 10px;
+  float: left;
+  text-transform: uppercase;
+  font-weight: bold;
+  &:hover {
+    color: #222222;
+  }
+}
+
+.framgia_logo{
+  margin: -19px 20px;
+}
+
+/* footer */
+
+.framgia_logo2 {
+  margin: -10px -10px;
+}
+
+.footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 15px 90px;
+  .footer-left, .footer-center, .footer-right {
+    display: inline-block;
+    vertical-align: top;
+  }
+  .footer-left {
+    width: 37%;
+  }
+  .footer-links {
+    color: #ffffff;
+    margin: 5px 0 12px;
+    a {
+      display: inline-block;
+      line-height: 1.8;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+  .footer-company-name {
+    color: #8f9296;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  .footer-center {
+    width: 38%;
+    i {
+      background-color: #33383b;
+      color: #ffffff;
+      font-size: 25px;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 42px;
+      margin: 10px 15px;
+      vertical-align: middle;
+      &.fa-envelope {
+        font-size: 17px;
+        line-height: 38px;
+      }
+    }
+    p {
+      display: inline-block;
+      color: #ffffff;
+      vertical-align: middle;
+      margin: 0;
+      span {
+        display: block;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 2;
+      }
+      a {
+        color: #5383d3;
+        text-decoration: none;
+      }
+    }
+  }
+  .footer-right {
+    width: 20%;
+  }
+  .footer-company-about {
+    line-height: 20px;
+    color: #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+    span {
+      display: block;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  }
+  .footer-icons {
+    margin-top: 25px;
+    a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+      margin-right: 3px;
+      margin-bottom: 5px;
+      &:hover{
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+    .footer-left, .footer-center, .footer-right {
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .footer-center i {
+      margin-left: 0;
+    }
+  }
+}
+
+/* banner + search*/
+.popins-font {
+  margin-bottom: -120px;
+}
+
+.bt-search-banner {
+  background: url("framgia_index.jpg") no-repeat;
+  padding: 178px 0px;
+  text-align: center;
+  .main-title h1 {
+    margin-top: 30px;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 70px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e3e3e3;
+    padding: 0 20px;
+  }
+}
+
+.pt20 {
+  padding-top: 20px
+}
+
+.container {
+  width: 1200px
+}
+
+/*catogery menu*/
+
+.catagory-menu a {
+  display: block;
+  font-size: 16px;
+  line-height: 21px;
+  padding: 7px 11px;
+}
+
+.catagory-menu img {
+  margin-right: 15px;
+}
+
+.catagory-menu ul>li + li {
+  border-top: 1px solid #f1f1f1;
+}
+
+.catagory-menu {
+  background-color: #fff;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 0 rgba(205, 205, 205, 0.52);
+}
+
+.catagory-menu ul > li {
+  padding: 0;
+  position: relative;
+}
+
+.catagory-menu ul li ul li a {
+  padding: 9px 20px;
+}
+
+.catagory-menu ul li:hover > a {
+  color: #F32200;
+}
+
+ul {
+  list-style: outside none none;
+  margin: 0;
+  padding: 0
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #222
+}
+
+a:hover {
+  color: #F32200;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active, a:hover {
+  outline: 0 none;
+}
+
+a:focus {
+  outline: 0px solid
+}
+
+img {
+  max-width: 100%;
+  height: auto
 }

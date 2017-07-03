@@ -1,13 +1,56 @@
-<footer class="footer">
-  <small>
-    <a href="http://www.railstutorial.org/"><%= t(".footer_link1") %></a>
-    <a href="http://www.michaelhartl.com/"><%= t(".footer_link2") %></a>
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to t(".footer_link_about"), about_path %></li>
-      <li><%= link_to t(".footer_link_contact"), contact_path %></li>
-      <li><a href="http://news.railstutorial.org/"><%= t(".footer_link_news") %></a></li>
-    </ul>
-  </nav>
+<footer class="footer-distributed">
+
+  <div class="footer-left">
+
+    <%= link_to root_path, title: t(".footer_link1") do %>
+      <%= image_tag("framgia_logo.png", size: "250x120", alt: "framgia_logo", class: "framgia_logo2") %>
+    <% end %>
+
+    <p class="footer-links">
+      <%= link_to t(".home"), root_path %>
+      ·
+      <%= link_to t(".footer_link_about"), "#" %>
+      ·
+      <%= link_to t(".footer_link_contact"), "#" %>
+      ·
+      <%= link_to t(".footer_link_help"), "#" %>
+    </p>
+
+    <p class="footer-company-name"><%= t ".reserved" %></p>
+  </div>
+
+  <div class="footer-center">
+
+    <div>
+      <i class="fa fa-map-marker"></i>
+      <p>
+        <span><%= t ".office_place" %></span> <%= t ".office_place_detail" %>
+      </p>
+    </div>
+
+    <div>
+      <i class="fa fa-phone"></i>
+      <p><%= t ".phone_company" %></p>
+    </div>
+
+    <div>
+      <i class="fa fa-envelope"></i>
+      <p><%= link_to t(".mail_company"), "#" %></p>
+    </div>
+
+  </div>
+
+  <div class="footer-right">
+    <p class="footer-company-about">
+      <span><%= t ".info_company" %></span>
+      <%= t ".sub_info_company" %>
+    </p>
+
+    <div class="footer-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-twitter"></i></a>
+      <a href="#"><i class="fa fa-linkedin"></i></a>
+      <a href="#"><i class="fa fa-github"></i></a>
+    </div>
+  </div>
 </footer>

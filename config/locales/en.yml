@@ -49,18 +49,37 @@ en:
     header:
       app_name: "Library Management"
       home: "Home"
-      help: "Help"
       login: "Log in"
+      signup: "Signup"
       log_out: "Log out"
       english: "English"
-      vietnam: "VietNam"
+      vietnam: "VietNamese"
       languages: "Languages"
+      account: "Account "
+      dashboard: "Dashboard"
+      settings: "Settings"
+      banner_title: "Good books, like good friends, are few and chosen; the more
+        select, the more enjoyable"
+      book_name: "Book 's Name"
+      category: "Category"
+      publisher: "Publisher"
+      author: "Author"
+      btn_search: "Search"
     footer:
+      home: "Home"
       footer_link1: "Library Management"
-      footer_link2: "by Thanh && Hai"
       footer_link_about: "About"
       footer_link_contact: "Contact"
-      footer_link_news: "News"
+      footer_link_help: "Help"
+      reserved: "© 2017 Library Management. All rights reserved"
+      office_place: "Ha Noi (Head office)"
+      office_place_detail: "13F Keangnam Landmark 72 Tower"
+      mail_company: "support@framgia.com"
+      phone_company: "84-4-3795-5417"
+      info_company: "About the company"
+      sub_info_company: "Lorem ipsum dolor sit amet, consectateur adispicing elit.
+        Fusce euismod convallis velit, eu auctor lacus vehicula sit amet."
+
   static_pages:
     home:
       home_title_name: "Home"

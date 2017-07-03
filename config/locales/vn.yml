@@ -51,21 +51,41 @@ vn:
     header:
       app_name: "Hệ thống quản lý Thư viện trực tuyến"
       home: "Trang chủ"
-      help: "Trợ giúp"
       login: "Đăng nhập"
+      signup: "Đăng ký"
       log_out: "Đăng xuất"
       english: "English"
       vietnam: "Việt Nam"
       languages: "Ngôn ngữ"
+      account: "Tài khoản "
+      dashboard: "Quản trị"
+      profile: "Hồ sơ"
+      settings: "Cài đặt tài khoản"
+      logout: "Đăng xuất"
+      dashboard: "Truy cập quản trị"
+      settings: "Cài đặt tài khoản"
+      banner_title: "Sách hay, cũng như bạn tốt, ít và được chọn lựa;
+        chọn lựa càng nhiều, thưởng thức càng nhiều."
+      book_name: "Tên sách"
+      category: "Danh mục"
+      publisher: "Nhà phát hành"
+      author: "Tác giả"
+      btn_search: "Tìm kiếm"
     footer:
+      home: "Trang chủ"
       footer_link1: "HTQL thư viện trực tuyến"
-      footer_link2: "viết bởi Thanh && Hai"
       footer_link_about: "Về chúng tôi"
       footer_link_contact: "Liên hệ"
-      footer_link_news: "Tin mới"
-    application:
-      english: "Endlish"
-      vietnam: "Việt Nam"
+      footer_link_help: "Trợ giúp"
+      reserved: "© 2017 HTQL thư viện điện tử. Tất cả đã được đăng ký bản quyền"
+      office_place: "Hà Nội (Trụ sở chính)"
+      office_place_detail: "Tầng 13, Tòa nhà Keangnam Landmark 72"
+      mail_company: "support@framgia.com"
+      phone_company: "84-4-3795-5417"
+      info_company: "Về công ty"
+      sub_info_company: "IT là lĩnh vực công bình và không giới hạn,
+        nơi mỗi cá nhân được chia sẻ cơ hội và nhìn nhận thông qua nỗ lực thực sự"
+
   static_pages:
     home:
       home_title_name: "Trang chủ"
