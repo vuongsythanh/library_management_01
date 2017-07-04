@@ -1,0 +1,38 @@
+<%= javascript_include_tag "login" %>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog"
+     aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content login-modal">
+      <div class="modal-header login-modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title text-center" id="loginModalLabel"><%= t ".library_management" %></h4>
+      </div>
+      <div class="modal-body">
+        <div role="tabpanel" class="login-tab">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+              <a id="signin-taba" href="#user-login" aria-controls="user-login"
+                 role="tab" data-toggle="tab"><%= t ".sign_in" %></a>
+            </li>
+            <li role="presentation">
+              <a id="signup-taba" href="#user-create" aria-controls="user-create"
+                 role="tab" data-toggle="tab"><%= t ".sign_up" %></a>
+            </li>
+          </ul>
+        </div>
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active text-center" id="user-login">
+            <div class="clearfix"></div>
+            <%= render "users/login" %>
+          </div>
+          <div role="tabpanel" class="tab-pane text-center" id="user-create">
+            <div class="clearfix"></div>
+            <%= render "users/form" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

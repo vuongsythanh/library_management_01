@@ -2,6 +2,7 @@ class Admin::AuthorsController < ApplicationController
   layout "dashboard"
   before_action :load_author, except: [:create, :index]
   before_action :load_author_size, only: :index
+  before_action :verify_admin?
 
   def index
     @author = Author.new

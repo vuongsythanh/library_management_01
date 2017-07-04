@@ -1,4 +1,5 @@
 class Admin::ExportBookExcelController < ApplicationController
+  before_action :verify_admin?
   def index
     if params[:search]
       @books = Book.all.search_name(params[:search]).order created_at: :desc

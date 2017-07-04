@@ -1,4 +1,5 @@
 class Admin::ExportCateExcelController < ApplicationController
+  before_action :verify_admin?
   def index
     if params[:search]
       @categories = Category.all.includes(:books)

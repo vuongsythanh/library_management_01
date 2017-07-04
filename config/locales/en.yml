@@ -1,4 +1,12 @@
 en:
+  books:
+    index:
+      book_name: "Book name"
+      available: "Available"
+      no_available: "No Available"
+      author_name: "Author name"
+      publisher_name: "Publisher name"
+      list_book: "List book"
   dictionary:
     name: &name "Name"
     phone: &phone "Phone"

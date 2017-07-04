@@ -1,0 +1,15 @@
+<% @users.each_with_index do |user, index| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.is_admin? ? "admin" : "user" %></td>
+    <td class="text-center">
+      <% unless current_user? user %>
+        <%= link_to admin_user_path(user), title: t(".delete"), method: :delete,
+          data: {confirm: t(".are_you_sure")}, class: "btn btn-danger" do %>
+          <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      <% end %>
+    </td>
+    </td>
+  </tr>
+<% end %>

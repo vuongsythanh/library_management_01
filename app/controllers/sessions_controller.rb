@@ -3,14 +3,20 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by email: params[:session][:email]
+    user = User.find_by email: params[:session][:email].downcase
+
     if user && user.authenticate(params[:session][:password])
-      flash[:success] = t ".user_logged"
       log_in user
-      redirect_to admin_users_url
+      params[:session][:remember_me] = "1" ? remember(user) : forget(user)
+      flash[:success] = t ".login_success"
+      respond_to do |format|
+        format.json {render json: {error: false}}
+      end
     else
-      flash[:danger] = t ".user_fail"
-      render :new
+      respond_to do |format|
+        format.json {render json: {error: true,
+          message: t(".login_fail")}}
+      end
     end
   end
 

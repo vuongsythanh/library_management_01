@@ -2,6 +2,7 @@ class Admin::BooksController < ApplicationController
   layout "dashboard"
   before_action :load_book, except: [:create, :index]
   before_action :load_book_size, only: :index
+  before_action :verify_admin?
 
   def index
     if params[:search]

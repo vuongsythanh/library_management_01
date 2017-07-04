@@ -1,4 +1,12 @@
 vn:
+  books:
+    index:
+      book_name: "Tên sách"
+      available: "Còn"
+      no_available: "Hết"
+      author_name: "Tác giả"
+      publisher_name: "Nhà phát hành"
+      list_book: "Các đầu sách"
   dictionary:
     name: &name "Tên"
     phone: &phone "SĐT"

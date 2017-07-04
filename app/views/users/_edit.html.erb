@@ -1,0 +1,15 @@
+<div id="settingsModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title"><%= t ".settings_profile" %></h4>
+      </div>
+      <div class="modal-body">
+        <% if logged_in? %>
+          <%= render "users/settings" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

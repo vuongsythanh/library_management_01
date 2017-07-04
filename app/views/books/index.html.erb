@@ -1,0 +1,74 @@
+<% provide(:title, t(".home_title_name")) %>
+
+<div class="row">
+  <div class="col col-md-8 ptr">
+    <%= paginate @books, theme: "twitter-bootstrap-3" %>
+  </div>
+  <div class="col col-md-4">
+    <h1 class="pull-left title"><%= t ".list_book"%></h1>
+  </div>
+</div>
+
+<div class="row">
+  <% @books.each do |b| %>
+    <div class="col-md-4 ">
+      <div class="card">
+        <div class="card-header">
+          <div class="col-md-4 avatar">
+            <%= image_tag(b.image, class: "img") %>
+          </div>
+          <div class="col-md-8 info">
+            <h4><%= link_to b.title, "#", title: t(".book_name") %></h4>
+            <ul>
+              <li>
+                <i class="fa fa-map-marker"></i>
+                <% if b.status %>
+                  <span class="label label-success"><%= t ".available" %></span>
+                <% else %>
+                  <span class="label label-default"><%= t ".no_available"
+                  %></span>
+                <% end %>
+              </li>
+              <li>
+                <i class="fa fa-birthday-cake"></i>
+                <span><%= b.created_at.strftime("%d / %m / %Y") %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="headline"><%= b.description %></div>
+          <ul class="row">
+            <div class="col col-md-10">
+              <li>
+                <i class="fa fa-phone"></i>
+                <%= link_to "#", title: t(".author_name")  do %>
+                  <%= b.author_name %>
+                <% end %>
+              </li>
+              <li>
+                <i class="fa fa-envelope"></i>
+                <%= link_to "#", title: t(".publisher_name")  do %>
+                  <%= b.publisher_name %>
+                <% end %>
+              </li>
+            </div>
+            <div class="col col-md-2">
+              <li>
+                <span class="heart">
+                  <i class="fa fa-heart"></i>
+                </span>
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="row ptr">
+  <div class="col-lg-12 text-center">
+    <%= paginate @books, theme: "twitter-bootstrap-3" %>
+  </div>
+</div>
