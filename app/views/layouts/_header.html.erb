@@ -65,12 +65,12 @@
             </li>
           <% else %>
             <li>
-              <%= link_to "#" do %>
+              <%= link_to "#", data: {toggle: "modal", target: "#loginModal"} do %>
                 <span class="glyphicon glyphicon-chevron-up"> </span> <%= t ".signup" %>
               <% end %>
             </li>
             <li>
-              <%= link_to login_path do %>
+              <%= link_to "#", data: {toggle: "modal", target: "#loginModal"} do %>
                 <span class="glyphicon glyphicon-log-in"> </span> <%= t ".login" %>
               <% end %>
             </li>
@@ -80,6 +80,9 @@
     </div>
   </div>
 </nav>
+
+<%= render "users/modal" %>
+<%= render "users/edit" %>
 
 <!--category + search + title -->
 

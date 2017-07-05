@@ -37,7 +37,7 @@ class UsersController < ApplicationController
     else
       flash[:danger] = t ".user_updated_fail"
     end
-    redirect_to @user
+    redirect_to root_url
   end
 
   private

@@ -1,6 +1,13 @@
 en:
+  admin:
+    users:
+      table_data:
+        delete: "Delete"
+        are_you_sure: "Are you sure delete this item?"
   books:
     index:
+      home_title_name: "Home"
+      home_title: "Welcome to the Library Management"
       book_name: "Book name"
       available: "Available"
       no_available: "No Available"
