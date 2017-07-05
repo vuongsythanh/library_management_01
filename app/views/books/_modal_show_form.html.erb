@@ -1,0 +1,99 @@
+<div class="modal-body row">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 well" id="leftPanel">
+        <%= image_tag book.image, class: "img-rounded" %>
+        <hr class="colorgraph">
+        <div class="label label-default">
+          <%= t ".date_add" %>
+          <%= book.created_at.strftime("%d / %m / %Y") %>
+        </div>
+      </div>
+      <div class="col-md-9 well" id="rightPanel">
+        <div class="pull-right">
+          <% if book.status %>
+            <span class="label label-success"><%= t ".available" %></span>
+          <% else %>
+            <span class="label label-danger"><%= t ".no_available" %></span>
+          <% end %>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <p class="h2 text-center">
+              <span class="label label-primary">
+                <%= t ".title" %> : <%= book.title.upcase %>
+              </span>
+            </p>
+            <hr>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".categories" %></span>
+                  </span>
+                  <input type="text" class="form-control"
+                         value="<%= @book.category_name %>" disabled >
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".author" %></span>
+                  </span>
+                  <input type="text" class="form-control"
+                         value="<%= @book.author_name %>" disabled >
+                </div>
+              </div>
+            </div><p></p>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".publisher" %></span>
+                  </span>
+                  <input type="text" class="form-control"
+                         value="<%= @book.publisher_name %>" disabled >
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".publish_date" %></span>
+                  </span>
+                  <input type="text" class="form-control"
+                     value="29/12/2016"disabled>
+                </div>
+              </div>
+            </div><p></p>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".number_pages" %></span>
+                  </span>
+                  <input type="text" class="form-control" value="102" disabled>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                    <span class="label label-info"><%= t ".limit_date" %></span>
+                  </span>
+                  <input type="text" class="form-control" value="7" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-xs-12 col-sm-12 col-md-12">
+                <span class="label label-info"><%= t ".description" %></span>
+                <textarea class="form-control" disabled rows="4">
+                  <%= book.description %>
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

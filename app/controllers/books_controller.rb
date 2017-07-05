@@ -8,7 +8,8 @@ class BooksController < ApplicationController
   end
 
   def show
-    respond_to do |format| format.html {render partial: "modal_show_form", locals: {book: @book}}
+    respond_to do |format|
+      format.html{render partial: "modal_show_form", locals: {book: @book}}
     end
   end
 
@@ -18,7 +19,7 @@ class BooksController < ApplicationController
     @book = Book.find_by id: params[:id]
     unless @book
       flash[:info] = t ".not_load_book"
-      redirect_to admin_books_url
+      redirect_to books_url
     end
   end
 end

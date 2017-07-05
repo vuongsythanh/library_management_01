@@ -50,4 +50,4 @@ export_auth_excel:
 books:
   per_page: 10
   params_page: 1
-  per_page_index: 9
+  per_page_index: 12
