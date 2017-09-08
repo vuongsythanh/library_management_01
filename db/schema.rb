@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170224070600) do
+ActiveRecord::Schema.define(version: 20170903183348) do
 
   create_table "activities", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "action_type"
@@ -75,6 +75,9 @@ ActiveRecord::Schema.define(version: 20170224070600) do
     t.index ["user_id"], name: "index_comments_on_user_id", using: :btree
   end
 
+  create_table "database_structures", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  end
+
   create_table "likes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id"
     t.integer  "book_id"
@@ -136,7 +139,7 @@ ActiveRecord::Schema.define(version: 20170224070600) do
     t.boolean  "remember_digest"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
-    t.index ["email", "phone"], name: "index_users_on_email_and_phone", unique: true, using: :btree
+    t.index ["phone"], name: "index_users_on_phone", unique: true, using: :btree
   end
 
 end
